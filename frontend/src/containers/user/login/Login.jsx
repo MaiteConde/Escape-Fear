@@ -1,7 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-// import './Login.scss'
-// import './index.css';
+import './Login.scss'
 import { notification } from 'antd';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { login } from '../../../redux/actions/users';
@@ -21,7 +20,7 @@ export default function Login(props) {
 .catch(err =>{
     notification.error({ message: 'Failed connection', description: 'Incorrect User or Password'})
     setTimeout(() => {
-        props.history.push('/login');
+        props.history.push('/');
         console.error(err)})
     }, 2000);}
       const onFinishFailed = errorInfo => {
@@ -30,7 +29,7 @@ export default function Login(props) {
     return (
         <div className="login">
            
-        <Form className="form"{...layout}
+        <Form className="form"{...layout}  
           name="basic"
           initialValues={{
             remember: true,
@@ -65,12 +64,10 @@ export default function Login(props) {
             <Input.Password />
           </Form.Item>
     
-          <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-            <Checkbox>Remember me</Checkbox>
-          </Form.Item>
+        
     
           <Form.Item {...tailLayout}>
-            <Button type="primary" htmlType="submit">
+            <Button  htmlType="submit">
               Submit
             </Button>
           </Form.Item>

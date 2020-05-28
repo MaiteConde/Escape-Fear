@@ -1,5 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
+import './Register.scss'
 import { notification } from 'antd';
 import {Form,Input,Tooltip,Button} from 'antd';
 import { register } from '../../../redux/actions/users';
@@ -132,7 +133,7 @@ const Register = (props) => {
           Register
         </Button>
       </Form.Item>
-      <span className="redirección">Already an account?  <Link to='register'>Log in</Link></span>
+      <span className="redirección">Already an account?  <Link to='login'>Log in</Link></span>
     </Form>
     </div>
   );

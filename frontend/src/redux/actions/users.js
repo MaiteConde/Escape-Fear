@@ -22,9 +22,9 @@ export const register = async(user) => {
 }
 
 export const logout = async() => {
-    const res = await axios.get(API_URL + 'users/logout', {
+    await axios.get(API_URL + 'users/logout', {
         headers: {
-            Authorization: localStorage.getItem('authToken')
+            Authorization: 'Bearer ' + localStorage.getItem('authToken')
         }
     })
     localStorage.removeItem('authToken');
@@ -32,7 +32,7 @@ export const logout = async() => {
         type: 'LOGOUT'
     })
     
-    return clearData()
+   
 }
 
 export const getInfo = async () => {

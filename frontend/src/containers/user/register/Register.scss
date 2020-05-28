@@ -1,0 +1,43 @@
+.form {
+    
+width: 80%;
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// align-items: center;
+color: whitesmoke !important;
+}
+
+.ant-form-item-label > label {
+    color: whitesmoke;
+}
+
+.ant-btn-primary {
+    background-color: whitesmoke;
+    color: rgba(0, 0, 0, 0.514);
+}
+
+.register {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+ 
+}
+
+a, area, button, [role="button"], input:not([type="range"]), label, select, summary, textarea {
+  color: white;
+}
+
+
+@media (max-width: 575px) {
+
+    
+    .register {
+     
+        background-image: url(https://i.pinimg.com/564x/0d/b2/9f/0db29f798b2ee71d4867e8268549626c.jpg);
+      
+        background-position: center;
+        background-repeat: no-repeat;
+      
+    }
+    }

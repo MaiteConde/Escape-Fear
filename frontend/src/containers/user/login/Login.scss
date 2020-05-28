@@ -1,0 +1,68 @@
+.form {
+    margin: 3em;
+width: 80%;
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// align-items: center;
+color: whitesmoke !important;
+}
+
+.ant-form-item-label > label {
+    color: whitesmoke;
+}
+h1 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+a, area, button, [role='button'], input:not([type='range']), label, select, summary, textarea {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    background-color: rgba(0, 0, 0, 0);
+}
+.ant-input-affix-wrapper {
+    background-color: rgba(0, 0, 0, 0);
+}
+.anticon svg {
+    
+    color: white;
+}
+
+.login {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+   
+  
+}
+
+.container {
+    padding: 2em;
+}
+
+// .ant-form-item-control-input-content {
+//     -ms-flex: auto;
+    
+// }
+
+
+
+
+@media (max-width: 575px) {
+
+.ant-form .ant-form-item {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.login {
+ 
+    background-image: url(https://i.pinimg.com/564x/0d/b2/9f/0db29f798b2ee71d4867e8268549626c.jpg);
+  
+    background-position: center;
+    background-repeat: no-repeat;
+  
+}
+}
