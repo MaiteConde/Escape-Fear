@@ -1,15 +1,21 @@
 import React, { useEffect, Fragment } from 'react'
 import { getAllRooms } from '../../redux/actions/rooms'
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+
 import './Home.scss'
-import { Card } from 'antd';
 
 const Home = ({rooms}) => {
-    const { Meta } = Card;
-
     useEffect(() => {
        getAllRooms()
     }, [])
+    
+    if(!rooms){
+        return   <div id="preloader">
+        <div id="loader"></div>
+      </div> 
+             
+    }
     return (
         <div className="superfull">
             <div className="head"><p>holi</p></div>
@@ -32,7 +38,9 @@ const Home = ({rooms}) => {
          <span>  {room?.persons} players / {room?.category.name} / {room?.time} </span>    
 <br/>
   {room?.history}
+  <NavLink to= {`/steps/${room?.id}`} activeClassName="isActive" exact>
   <a class="btn btn-3">Book Now</a> 
+  </NavLink>
   </div>
   
                
@@ -43,8 +51,8 @@ const Home = ({rooms}) => {
                   
                 })
             }
-            </div>        
-        </div>
+            </div>       
+           </div>
     )
 }
 

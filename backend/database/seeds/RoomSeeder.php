@@ -62,7 +62,7 @@ class RoomSeeder extends Seeder
                 So be smart and dont be lasagne.',
                 'persons' => '2-4',
                 'city' => 'Barcelona',
-                'image_path' => 'https://lh3.googleusercontent.com/proxy/wwVuPKH8tT1vsOHw9Dfyz71Ab4HN9YnQqe-PZe9a8JeXYZmrUiPIB8pejhDtjYbMpbr-Tqr1chvoFqzpmkCMblwiB1D1_5dtMq0Tf7ZudKdqY-7ptAXcZxPNIh_PLKEuEUkr',
+                'image_path' => 'https://writinggoals.com/sites/default/files/field/image/suspense-conspiracy-thriller.jpeg',
                 'category_id' => 2
             ]
         ]);

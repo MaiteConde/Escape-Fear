@@ -29,3 +29,20 @@ export const getRoomById = async (id) => {
     })
 return res;
 }
+
+export const totalPrice = async (value) => {
+    store.dispatch({
+        type: 'TOTAL_PRICE',
+        payload: value
+      
+    })
+
+  };
+
+  export const reservDate = async (selectedValue) => {
+    store.dispatch({
+        type: 'RESER_DATE',
+        payload: selectedValue
+      
+    })
+};
