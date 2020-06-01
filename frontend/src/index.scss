@@ -8,7 +8,9 @@ body, html {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Montserrat', sans-serif !important;
   color: whitesmoke !important;
-  background-color: $otro !important;
+  // background-color: $otro !important;
+  background-image: url(https://images.wallpaperscraft.com/image/forest_fog_trees_147805_3840x2160.jpg);
+
 }
 
 code {
@@ -149,3 +151,5 @@ a, area, button, [role='button'], input:not([type='range']), label, select, summ
           width: 120%;
         }}
       }
+
+    

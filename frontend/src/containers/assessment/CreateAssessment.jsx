@@ -25,8 +25,8 @@ const CreateAssessment = ({room, user, totalP, reserDate}) => {
             notification.success({message:'Reservation created. Check your email!'})
            
         })
-        .catch(()=>{
-           
+        .catch((error)=>{
+           console.error(error)
         })
     }
     return (

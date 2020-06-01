@@ -51,6 +51,8 @@ Route::prefix('v1')->group( function () {
         'middleware'=>'auth:api'
     ], function () {
         Route::get('/', 'ReservationController@getAll');
+        Route::delete('/{id}', 'ReservationController@delete');
+
         Route::post('/{id}', 'ReservationController@insert');
     });
 

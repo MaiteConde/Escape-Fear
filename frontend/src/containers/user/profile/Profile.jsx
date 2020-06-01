@@ -20,17 +20,21 @@ const Profile = ({user}) => {
            {user?.reservations.map((reservation) =>
            {return <div>
                <h2>Reservations:</h2>
+           <NavLink to= {`/room/${reservation?.room?.id}`} activeClassName="isActive" exact><p>Room: {reservation?.room?.name}</p>
              <p> Players: {reservation?.persons}</p> 
             <p> Date: {reservation?.date}</p>   
-           <NavLink to= {`/room/${reservation?.room?.id}`} activeClassName="isActive" exact><p>Room: {reservation?.room?.name}</p>
 </NavLink>
-<NavLink to= {`/editprofile`} activeClassName="isActive" exact>
-  <a class="btn btn-3">Edit profile</a> 
-  </NavLink>
+
 
 
                </div>}
            )}
+           
+           <NavLink to= {`/editprofile`} activeClassName="isActive" exact>
+               <div className="buttonContainer">
+               <div class="button">Edit profile</div>
+               </div>
+  </NavLink>
         </div> 
     )
 }

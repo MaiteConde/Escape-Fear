@@ -16,7 +16,7 @@ const Room = ({room}) => {
 
 
     let location = useLocation();
-    {console.log(location.pathname)}
+   
     const id = useParams().id
     useEffect(() => {
         getRoomById(id)
@@ -40,7 +40,11 @@ if(room?.id != id ){  getRoomById(id); return <div id="preloader">
 
 
            <div className="roomInfo">
-           <Menu />
+              { location.pathname.includes('room') == true?
+              <Menu />:  <div></div>
+              }
+          
+
            <div className="title">
   <h2>{room?.name} </h2>
          <span>  {room?.persons} players / {room?.category?.name} / {room?.time} </span>
@@ -56,21 +60,29 @@ if(room?.id != id ){  getRoomById(id); return <div id="preloader">
 
 
   </div>
+  
+ { location.pathname.includes('room') == true?
+ <div>
  <h2>Assessments:</h2>
+ {room?.assessment?.length == 0?
+<div> <h2>Be the first in write and assessment!</h2></div>: ''}
 
   {room?.assessment?.map((assessment => {
-                return <div className="assessments">
+    return (
+      <div className="assessments">
+    
                   <div className="ass">
                   <p> {assessment?.user?.name} said:</p>
                    <p>{assessment?.assessment}</p> 
                     <Rate disabled value = {assessment?.points}/>
-                    </div>
+                    </div> 
                     <div className="date">
                     <p> <Moment format="YYYY/MM/DD">{assessment.createdAt}</Moment></p>
                     </div>
                 </div>
-            }))}
+   ) }))} 
 <ModalAssessment />
+   </div>:''}
         </Fragment>
     )
 }
@@ -79,28 +91,3 @@ const mapStateToProps = ({rooms}) =>({room:rooms?.roomId});
 export default connect(mapStateToProps)  (Room);
 
 
-// const LoadRoom = () => {
-//   const history = useHistory();
-//   function onClick(e) {
-//     if(e.key==='Enter'){
-//         const value =e.target.value;
-//         history.push('/searchcat/'+value);
-//     }
-//   }
-//   return (
-//       <Fragment>
-//            {/* <h2>Search your location</h2> */}
-//       <div className="containersearch">
-//       <div className="search">
-//        <Search  onKeyUp={onClick} className="busca"
-//     placeholder="Find a cat in your location "
-//     enterButton="Search"
-//     size="large"
-//     onSearch={value => console.log(value)}
-//   />
-//       </div>
-//       </div>
-//       </Fragment>
-//   )
-// }
-// export default LoadRoom;

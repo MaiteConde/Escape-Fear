@@ -30,4 +30,29 @@ class ReservationController extends Controller
             ], 500);
         }
     }
+
+    public function delete($id)
+    {
+        try {
+            $reservation = Reservation::find($id) ;
+            
+            if (Auth::id() !== $reservation -> id) {
+                return response([
+                    'message' => 'You are not the author',
+
+                ]);
+            }
+            $reservation->delete();
+            
+            return response([
+                'message' => 'Reservation deleted',
+                'reservation' => $reservation
+            ]);
+        } catch (\Exception $e) {
+            return response([
+                'error' => $e->getMessage()
+            ], 500);
+        
+        }
+    }
 }
