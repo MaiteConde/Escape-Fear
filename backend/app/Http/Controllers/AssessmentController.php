@@ -14,6 +14,13 @@ class AssessmentController extends Controller
         $assesments = Assessment::with('user', 'room')->get();
         return $assesments;
     }
+
+    public function getPoints()
+    { 
+        $assesments = Assessment::where("points" , 5)->get(); 
+        return $assesments->load('user', 'room');
+    }
+   
    
     public function insert(Request $request, $id)
     {

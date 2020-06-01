@@ -44,7 +44,7 @@ const steps = [
       <h2>Reservation resume:</h2>
        <Room /> 
       <h2>Date:</h2>
-      <CreateReservation  />
+      {/* <CreateReservation  /> */}
   </Fragment>
   },
 ];
@@ -110,9 +110,7 @@ class ReserSteps extends React.Component {
              </h2>: ''
              }
 
-            {/* { typeof this.props.reserDate == 'date' ?
-              <h2>{ this.props?.reserDate}</h2>: ''}
-              {console.log (typeof this.props?.reserDate)} */}
+    
 <h2>Date:</h2>
 <h2><Moment format="YYYY/MM/DD">{this.props?.reserDate}</Moment></h2>
             
@@ -128,9 +126,10 @@ class ReserSteps extends React.Component {
             </Button>
           )}
           {current === steps.length - 1 && (
-            <Button type="primary" onClick={() => message.success('Processing complete!')}>
-              Done
-            </Button>
+            // <Button type="primary" onClick={() => message.success('Processing complete!')}>
+            //   Done
+            // </Button>
+            <CreateReservation />
           )}
           {current > 0 && (
             <Button style={{ margin: '0 8px' }} onClick={() => this.prev()}>

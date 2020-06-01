@@ -1,11 +1,56 @@
-.container {
-    min-width: 96%;
+@import '../../colors.scss';
 
-    
+
+.room {
+img{
+    width: 100%;
+    height: 100vh;
+}
+position: relative;
+text-align: center;
+color: white;
+display: flex;
+flex-direction: column;
 }
 
 
 
 .info {
-    min-width: 40%;
+    background-color: rgba(15, 13, 13, 0.281);
+    border-radius: 2em;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 10em;
+    left: 1em;
+    h2{
+        font-size: 8em;
+    }
+    width: 70%;
 }
+
+.assessments {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 3em;
+    padding: 1em;
+    border-left: solid $Solid 0.5em;
+    background-color: rgba(245, 245, 245, 0.521);
+}
+
+.roomInfo {
+    display: flex;
+
+}
+.title {
+    span {
+        color: $Solid;
+        font-family: 'Megrim', cursive; 
+    }
+    text-align: left;
+}
+
+
+
+

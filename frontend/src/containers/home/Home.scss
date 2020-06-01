@@ -1,92 +1,43 @@
 @import '../../colors.scss';
 
-.full{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(55,9,74,1) 31%, rgba(2,82,98,1) 100%);
 
-}
-
-.subtitle {
-    padding: 3em;
-    h2 {
-        color: whitesmoke;
-        font-family: 'Megrim', cursive;  
-    }
- 
-   
-   
-}
-
-.container{
-min-width: 100%;
-border-radius: 74% 26% 62% 38% / 16% 47% 53% 84%  ;
-
-margin: 3em;
-// background: linear-gradient(90deg, rgba(179,176,234,0.7822479333530288) 0%, rgba(235,213,244,0.7206232834930848) 31%, rgba(205,241,248,0.8242647400757178) 100%);// 
-// background-image: url(https://i1.wp.com/artbyrice.com/wp-content/uploads/2018/08/black-background-wood-i-e29da4-4k-hd-desktop-wallpaper-for-4k-ultra-hd.jpg?ssl=1);
-// border:  $Dark solid;
-background-color: $Dark;
-box-shadow: 4px 57px 73px -6px rgba(0,0,0,0.3);
-
-
-display: flex;
-align-items: center;
-justify-content: space-evenly;
-text-align: left;
-span{
-    font-family: 'Megrim', cursive;  
-    color: $Solid;
-}
-
-
-h2 {
-    font-family: 'Megrim', cursive;
-    color: whitesmoke;
-}
-img {
-    border: $Dark solid;
-    height: 30em;
-    width: 50em;
-    margin: 1em;
-    // border-radius: 1em;
-    border-radius: 5px 50px / 50px 15px;
-}
-}
-
-.info {
-    display: flex;
-    flex-direction: column;
-        width: 50%;
+.room {
+img{
+    width: 100%;
     
 }
-
-.head {
-    height: 50em;
-    background-image: url(https://www.metropoliabierta.com/uploads/s1/44/39/76/escape-room.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+position: relative;
+text-align: center;
+color: white;
+display: flex;
+flex-direction: column;
 }
 
 
-.btn {
-    width: 10em;
-    flex: 1 1 auto;
-    margin: 2em;
-    padding: 1em;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;
-    // box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-   }
-   .btn:hover {
-    background-position: right center;
-  }
-  .btn-3 {
-    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
-  }  
+
+.infoHome {
+    background-color: rgba(15, 13, 13, 0.281);
+    border-radius: 2em;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 15em;
+    left: 1em;
+    h2{
+        font-size: 8em;
+    }
+    width: 70%;
+}
+
+
+.roomInfo {
+    display: flex;
+
+}
+.title {
+    span {
+        color: $Solid;
+        font-family: 'Megrim', cursive; 
+    }
+    text-align: left;
+}

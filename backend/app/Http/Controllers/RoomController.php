@@ -17,7 +17,7 @@ class RoomController extends Controller
 
     public function getById(Request $request, $id) 
     { 
-        $room = Room::with('category', 'assessment')->find($id);
+        $room = Room::with('category', 'assessment.user')->find($id);
         return $room;
     }
     public function insert(Request $request)

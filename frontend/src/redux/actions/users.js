@@ -38,15 +38,36 @@ export const logout = async() => {
 export const getInfo = async () => {
     const res = await axios.get(API_URL + 'users/info', {
         headers: {
-            Authorization: localStorage.getItem('authToken')
+            Authorization: 'Bearer ' + localStorage.getItem('authToken')
         }
     }) 
     store.dispatch({
         type: 'GET_INFO',
-        user:res.data
+        payload:res.data
     })
 return res;
 }
+
+
+export const editProfile = async (user) => {
+    await axios.put(API_URL + 'users/update', user, {
+          headers: {
+            Authorization: 'Bearer ' + localStorage.getItem('authToken')
+          }
+      }) 
+    return getInfo();
+   
+      }
+
+export const editProfilePhoto = async (formData) => {
+        await axios.post(API_URL + 'users/image', formData, {
+              headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('authToken')
+              }
+          }) 
+        return getInfo();
+       
+          }
 
 // export const getInfoId = async (id) => {
 //     const res = await axios.get(API_URL + `users/user/${id}`, {
@@ -61,15 +82,7 @@ return res;
 // return res;
 // }
 
-// export const editProfile = async (formData, id) => {
-//     await axios.put(API_URL + `users/put`, formData, {
-//           headers: {
-//               Authorization: localStorage.getItem('authToken')
-//           }
-//       }) 
-//     return getInfo();
-   
-//       }
+
 
 // export const giveValuation = async (valuation, id) => {
 //         await axios.put(API_URL + `users/valuation/${id}`, valuation,{

@@ -2,20 +2,20 @@ const userReducer = (state = {}, action) => {
     switch (action.type) {
         case 'LOGIN':
         case 'LOGOUT':
-        case 'GET_INFO':
             return {
                 ...state,
                 user: action.user
             }
+            case 'GET_INFO':
+                return {
+                    ...state,
+                    myUser: action.payload
+                }
             case 'GET_INFO_ID':
                 return {
                     ...state,
                     userId: action.user
                 }
-                case 'GET_INFO':
-                    return {
-                        state:undefined
-                    }
               
             case 'CLEAR':
                 return{

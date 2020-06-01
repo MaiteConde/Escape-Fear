@@ -17,6 +17,25 @@ class UserController extends Controller
         $user = User::create($body);
         return response($user, 201);
     }
+
+
+    public function uploadImage(Request $request)
+    {
+        try {
+            $request->validate(['img' => 'required|image']);
+            $user = Auth::user();
+            $imageName = time() . '-' . request()->img->getClientOriginalName();
+            request()->img->move('images/profile', $imageName);
+            $user->update(['image_path' => $imageName]);
+            return response($user);
+        } catch (\Exception $e) {
+            return response([
+                'error' => $e,
+            ], 500);
+        }
+    }
+
+
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
@@ -25,7 +44,7 @@ class UserController extends Controller
                 'message' => 'Wrong Credentials'
             ], 400); 
         }
-        $user = Auth::user(); //req.user tb podemos utilizar $request->user()
+        $user = Auth::user(); 
         $token = $user->createToken('authToken')->accessToken;
         return response([
             $user,
@@ -35,15 +54,33 @@ class UserController extends Controller
     public function logout(Request $request)
     {
         $request->user()->token()->revoke();
-        // DB::table('oauth_access_tokens')->where('revoked',1)->delete();
         return [
             'mensaje' => 'User successfully logged out'
         ];
     }
     public function getUserInfo(Request $request)
     {
-        $user = Auth::user();//req.user
-        // $request->user();
-        return $user;
-    }
+        $user = Auth::user();
+        
+        return $user->load('assessments','reservations.room'); 
+    } 
+
+    public function update(Request $request)
+    {
+        try {
+           
+            $body = $request->validate([
+                'name' => 'string|max:40',
+                
+            ]);
+            $user = Auth::user();
+            $user->update($body);
+           
+            return response($user->load('assessments','reservations.room'));
+        } catch (\Exception $e) {
+            return response([
+                'error' => $e
+            ], 500);
+        }
+    } 
 }

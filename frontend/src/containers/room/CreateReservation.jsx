@@ -2,19 +2,33 @@ import React from 'react'
 import { createReservation } from '../../redux/actions/reservations';
 import { connect } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom'
-import { reservDate } from '../../redux/actions/rooms';
-import Moment from 'react-moment';
+import { Button, notification } from 'antd';
 import moment from 'moment';
+import {useHistory} from 'react-router-dom';
+
 
 
 
 
 const CreateReservation = ({room, user, totalP, reserDate}) => {
-    let location = useLocation();
+    const history = useHistory();
     
 
     const id = useParams().id
 
+            
+    const totalA = (a) => {
+         if (totalP = 3) {
+             return a * 18
+         }
+         if (totalP = 4) {
+            return a * 15
+        }
+        if (totalP = 2) {
+            return a * 20
+        }
+    }
+   
     const handleSubmit = event => {
         event.preventDefault();
         const reservation = {
@@ -22,24 +36,26 @@ const CreateReservation = ({room, user, totalP, reserDate}) => {
             date: moment(reserDate).format('YYYY/MM/DD'),
             user_id: user?.id,
             room_id: id,
-            price: 54
-            
+            price: totalA(totalP) 
         }
-        console.log(user?.id)
+        
         createReservation(reservation, id)
         .then(res => {
-          
-           console.log(reservation)
+            notification.success({message:'Reservation created. Check your email!'})
+            setTimeout(() => {
+                history.push('')
+            }, 2000);
         })
         .catch(()=>{
            
         })
     }
     return (
-        <div>
-         
-           <button onClick={handleSubmit}></button>
-        </div>
+        <Button type="primary"  onClick={handleSubmit}>
+        Reserve
+      </Button>
+        
+       
     )
 }
 

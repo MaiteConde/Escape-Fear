@@ -1,0 +1,30 @@
+@import '../colors.scss ';
+
+
+li {
+    list-style:none ;
+    font-size: larger !important;
+    padding: 0.5em;
+    margin: 3em 4em;
+    
+    h3 {
+        font-family: 'Megrim', cursive;  
+        color: $Solid;
+    }
+}
+
+li:hover {
+  
+    cursor: pointer;
+}
+
+
+
+.menu {
+    // border-right: whitesmoke solid; 
+    display: flex;
+    justify-content: center;
+}
+
+
+

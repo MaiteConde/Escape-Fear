@@ -10,6 +10,9 @@ import provincias from './location'
 
 import reservations from './reservation'
 
+import assessments from './assessment'
+
+
 
 const reducer = combineReducers({
     user,
@@ -18,6 +21,8 @@ const reducer = combineReducers({
 
     rooms,
 
-    reservations
+    reservations,
+
+    assessments
 })
 export default reducer;

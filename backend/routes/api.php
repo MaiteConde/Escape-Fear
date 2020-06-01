@@ -12,8 +12,10 @@ Route::prefix('v1')->group( function () {
 
         Route::middleware('auth:api')->group(function ()
         {
+            Route::post('/image','UserController@uploadImage'); 
             Route::get('/logout','UserController@logout');
             Route::get('/info','UserController@getUserInfo');
+            Route::put('/update', 'UserController@update');
         });
     });
 
@@ -41,6 +43,7 @@ Route::prefix('v1')->group( function () {
         'middleware'=>'auth:api'
     ], function () {
         Route::get('/', 'AssessmentController@getAll');
+        Route::get('/points', 'AssessmentController@getPoints');
         Route::post('/{id}', 'AssessmentController@insert');
     });
     Route::group([

@@ -48,7 +48,7 @@ class RoomSeeder extends Seeder
                 Grab your laser-swords. Arm your blasters. Complete the mission and escape before the Horizon Alpha is reduced to atoms. Good luck, you are our only hope!',
                 'persons' => '2-4',
                 'city' => 'Barcelona',
-                'image_path' => 'https://img.microsiervos.com/images2018/Interstellar_Black_Hole.jpg',
+                'image_path' => 'https://images5.alphacoders.com/542/thumb-1920-542019.jpg',
                 'category_id' => 1
             ],
             [

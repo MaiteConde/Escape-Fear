@@ -26,6 +26,8 @@ code {
 }
 
 #preloader {
+  height: 100%;
+background-image: url(https://images.wallpaperscraft.com/image/forest_fog_trees_147805_3840x2160.jpg);
   position: fixed;
   top: 0;
   left: 0;
@@ -33,17 +35,20 @@ code {
   height: 100%;
 }
 #loader {
+  height: 100%;
   display: block;
   position: relative;
+  background-image: url(https://images.wallpaperscraft.com/image/forest_fog_trees_147805_3840x2160.jpg);
+
   left: 50%;
   top: 50%;
   width: 150px;
   height: 150px;
   margin: -75px 0 0 -75px;
   border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: rgb(112, 219, 210);
-  -webkit-animation: spin 2s linear infinite;
+  // border: 3px solid transparent;
+  // border-top-color: rgb(112, 219, 210);
+  // -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
 #loader:before {
@@ -104,3 +109,43 @@ a, area, button, [role='button'], input:not([type='range']), label, select, summ
 .anticon svg {
   color: $Solid !important;
 }
+
+
+.button {
+  width: 15em;
+  flex: 1 1 auto;
+  margin: 1em;
+  padding: 1.5em;
+  border: 2px solid $Solid;
+  border-radius: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+  &:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: $Solid;
+  }
+  &:nth-of-type(5):after {
+      height: 120%;
+      left: -10%;
+      transform: skewX(15deg);
+      z-index: -1;
+    }
+    &:hover {
+      cursor: pointer;
+      &:after {
+        width: 100%;
+        left: 0;
+      }&:nth-of-type(5):after {
+          left: -10%;
+          width: 120%;
+        }}
+      }
