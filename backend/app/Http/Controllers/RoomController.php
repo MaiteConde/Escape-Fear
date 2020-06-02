@@ -35,4 +35,39 @@ class RoomController extends Controller
             ], 500);
         }
     }
+
+    public function delete($id)
+    {
+        try {
+            $room = Room::find($id) ;
+           
+            $room->delete();
+            
+            return response([
+                'message' => 'Reservation deleted',
+                'room' => $room
+            ]);
+        } catch (\Exception $e) {
+            return response([
+                'error' => $e->getMessage()
+            ], 500);
+        
+        }
+    }
+
+    public function update(Request $request, $id)
+    {
+
+        try {
+            $body = $request->all();
+            $room = Room::find($id);
+            $room -> update($body);
+           
+            return response($room->load('category', 'assessment.user'));
+        } catch (\Exception $e) {
+            return response([
+                'error' => $e
+            ], 500);
+        }
+    } 
 }

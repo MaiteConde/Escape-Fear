@@ -35,6 +35,12 @@ Route::prefix('v1')->group( function () {
         Route::get('/', 'RoomController@getAll');
         Route::post('/', 'RoomController@insert');
         Route::get('/{id}', 'RoomController@getById');
+
+        Route::middleware(['auth:api','checkRole:admin'])->group(function ()
+        {
+        Route::put('/{id}', 'RoomController@update');
+        });
+
     });
 
     

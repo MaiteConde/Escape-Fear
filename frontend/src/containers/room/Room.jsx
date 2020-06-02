@@ -12,10 +12,7 @@ import ModalAssessment from '../assessment/ModalAssessment'
 
 
 const Room = ({room}) => {
-
-
     let location = useLocation();
-   
     const id = useParams().id
     useEffect(() => {
         getRoomById(id)
