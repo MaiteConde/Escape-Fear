@@ -7,7 +7,6 @@ import { logout } from '../redux/actions/users'
 import './Header.scss'
 import MenuItem from 'antd/lib/menu/MenuItem';
 
-const { SubMenu } = Menu;
 
 const Header = ({user}) =>  {
  

@@ -43,7 +43,7 @@ const CreateReservation = ({room, user, totalP, reserDate}) => {
         .then(res => {
             notification.success({message:'Reservation created. Check your email!'})
             setTimeout(() => {
-                history.push('')
+                history.push('/profile')
             }, 2000);
         })
         .catch(()=>{

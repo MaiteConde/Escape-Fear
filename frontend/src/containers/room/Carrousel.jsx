@@ -8,18 +8,25 @@ import './Carrousel.scss'
 
  const Carrousel = ({rooms}) => {
     useEffect(() => {
-        getAllRooms()
+        getAllRooms() 
      }, [])
-     
-    return (
-        <div>
-            <Carousel autoplay>
+     return (
+         <div>
+            <Carousel  autoplay>
             { rooms?.map(room => {
+             const divStyle = {
+               color: 'white',
+                // backgroundimage: `image(${room?.image_path})`
+                backgroundcolor: 'pink'
+              };
+             
                return (
                    <Fragment>
-<div className="room">  <img alt="example" src={room?.image_path} /> </div>
-<div className="roomInfo">
-<h2>{room?.name}</h2>
+{/* <div className="room" >  <img alt="example" src={room?.image_path} /> </div> */}
+<div className="carrouInfo"  style={divStyle} >
+    <div><h2>{room?.name}</h2></div>
+<div><p>{room?.history}</p></div>
+ 
 </div>
 
 </Fragment>

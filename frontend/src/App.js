@@ -39,15 +39,12 @@ function App() {
         
         
 
-        {/* <Route exact path='*' component={NotFound} /> */}
+        
        
       </Switch>
     </BrowserRouter>
 
-    {/* <div className="title">
-     <h1>ADOPT<br></br> DONT SHOP</h1> 
-     <Button>KNOW MORE</Button>
-    </div> */}
+    
   </div>
   );
 }

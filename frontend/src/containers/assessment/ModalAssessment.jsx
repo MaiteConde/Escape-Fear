@@ -29,7 +29,7 @@ class ModalAssessment extends React.Component {
   render() {
     return ( 
       <div>
-        <Button  type="primary" onClick={this.showModal}>
+        <Button className="primaryButton"  type="primary" onClick={this.showModal}>
           Write an assessment
         </Button>
   

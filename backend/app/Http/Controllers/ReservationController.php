@@ -35,13 +35,7 @@ class ReservationController extends Controller
     {
         try {
             $reservation = Reservation::find($id) ;
-            
-            if (Auth::id() !== $reservation -> id) {
-                return response([
-                    'message' => 'You are not the author',
-
-                ]);
-            }
+           
             $reservation->delete();
             
             return response([

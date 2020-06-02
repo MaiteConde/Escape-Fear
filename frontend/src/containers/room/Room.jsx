@@ -7,8 +7,7 @@ import './Room.scss'
 import Menu from '../../components/Menu';
 import { Rate } from 'antd';
 import Moment from 'react-moment';
-
-
+import { Button } from 'antd';
 import ModalAssessment from '../assessment/ModalAssessment'
 
 
@@ -49,10 +48,11 @@ if(room?.id != id ){  getRoomById(id); return <div id="preloader">
   <h2>{room?.name} </h2>
          <span>  {room?.persons} players / {room?.category?.name} / {room?.time} </span>
 <br/>
-  {room?.history}
+  {room?.history} 
   { location.pathname.includes('room') == true?
 <NavLink to= {`/steps/${room?.id}`} activeClassName="isActive" exact>
-<div class="button">Book Now</div>
+  <div className="buttonsRoom"><Button className="primaryButton">Book now</Button></div>
+
   </NavLink>: ''}
   </div>
 

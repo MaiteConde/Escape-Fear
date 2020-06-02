@@ -1,43 +1,87 @@
 @import '../../colors.scss';
 
 
-.room {
-img{
-    width: 100%;
+// .room {
+// img{
+//     width: 100%;
     
-}
-position: relative;
-text-align: center;
-color: white;
-display: flex;
-flex-direction: column;
-}
+// }
+// position: relative;
+// text-align: center;
+// color: white;
+// display: flex;
+// flex-direction: column;
+// }
 
 
 
-.infoHome {
-    background-color: rgba(15, 13, 13, 0.281);
-    border-radius: 2em;
+// .infoHome {
+//     background-color: rgba(15, 13, 13, 0.281);
+//     border-radius: 2em;
+//     display: flex;
+//     justify-content: space-around;
+//     position: absolute;
+//     top: 15em;
+//     left: 1em;
+//     h2{
+//         font-size: 8em;
+//     }
+//     width: 70%;
+// }
+
+
+// .roomInfo {
+//     display: flex;
+
+// }
+// .title {
+//     span {
+//         color: $Solid;
+//         font-family: 'Megrim', cursive; 
+//     }
+//     text-align: left;
+// }
+
+.full{
     display: flex;
-    justify-content: space-around;
-    position: absolute;
-    top: 15em;
-    left: 1em;
-    h2{
-        font-size: 8em;
+    padding: 2em;
+    justify-content: center;
+}
+ 
+.ant-card-bordered {
+    margin: 3em;
+    height: 22em;
+    border-radius: 0.2em;
+    box-shadow: 0px 18px 41px -14px rgba(0,0,0,0.75);
+
+    img {
+        height: 9em;
+        border-top-left-radius: 0.2em;
+        border-top-right-radius: 0.2em;
+
     }
-    width: 70%;
 }
-
-
-.roomInfo {
-    display: flex;
-
-}
-.title {
-    span {
-        color: $Solid;
-        font-family: 'Megrim', cursive; 
+.homeInfo{
+    h2 {
+        text-align: center;
+        margin: 2em;
     }
     text-align: left;
+    width: 50%;
+    justify-self: center;
+    margin: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    button {
+        margin: 0.7em;
+        width: 12em;
+        border-radius: 1em;
+       
+    }
+}
+.primaryButton {
+   background-color: $Solid;
 }

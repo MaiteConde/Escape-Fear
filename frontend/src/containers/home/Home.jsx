@@ -21,7 +21,10 @@ const Home = ({rooms}) => {
     }
     return (
       <Fragment>
-
+<Carrousel/>
+<div className="homeInfo">
+      <h2>Escapes Rooms</h2>
+      <p>Designed with strong narratives woven into the warp and weft of the adventures, our games will immerse you into a story-world where you are the protagonists. Every challenge you face will carry a deeper meaning than meets the eye and understanding their secrets will provide you with an added advantage into the game as the story unfolds.</p></div>
       <Rooms />
       {/* <Assessments /> */}
       </Fragment>

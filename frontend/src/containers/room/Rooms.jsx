@@ -2,11 +2,12 @@ import React, { useEffect, Fragment } from 'react'
 import { getAllRooms } from '../../redux/actions/rooms'
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { Button } from 'antd';
 
-import Menu from '../../components/Menu';
+import { Card } from 'antd';
 
 import '../home/Home.scss'
-import Header from '../../components/Header';
+const { Meta } = Card;
 
 const Rooms = ({rooms}) => {
     useEffect(() => {
@@ -27,33 +28,22 @@ const Rooms = ({rooms}) => {
        
             { rooms?.map(room => {
                 return (
-                
- <Fragment >
+               
+                  <Card
+                  
+                  style={{ width: 240 }}
+                  cover={<img alt="example" src={room?.image_path} />}
+                >
+                  <Meta title={room?.name}  />
+                  <span>  {room?.persons} players / {room?.category.name} / {room?.time} </span>    
+                  <div className="buttons">
+                  <NavLink to= {`/room/${room?.id}`} activeClassName="isActive" exact>
+                  <Button  className="secondButton" type="dashed">More info</Button></NavLink> 
+                  <NavLink to= {`/steps/${room?.id}`} activeClassName="isActive" exact>
+                  <Button className="primaryButton" type="primary">Book now</Button></NavLink>
+                  </div>
+                </Card>
  
- {room?.id == 1? 
- <div className="room">
-     <img alt="example" src={room?.image_path} />
-     </div>
-      :<div></div>
-    } 
-     {room?.id == 1?
-   <div className="infoHome">
-   <div className="roomInfo">
-   <Menu/>
-   <div className="title">
-   <h2>{room?.name} </h2>
-          <span>  {room?.persons} players / {room?.category.name} / {room?.time} </span>    
- <br/>
-   {room?.history}
-   <NavLink to= {`/steps/${room?.id}`} activeClassName="isActive" exact>
-   <a class="btn btn-3">Book Now</a> 
-   </NavLink>
-  
-   </div>
-   </div>          
-   </div>
-    :''} 
- </Fragment>
     )
                    
                    
