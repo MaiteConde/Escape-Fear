@@ -3,6 +3,8 @@ import 'antd/dist/antd.css';
 import { Carousel } from 'antd';
 import { getAllRooms } from '../../redux/actions/rooms';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { Button } from 'antd';
 import './Carrousel.scss'
 
 
@@ -12,7 +14,7 @@ import './Carrousel.scss'
      }, [])
      return (
          <div>
-            <Carousel  autoplay>
+            <Carousel  autoplay> 
             { rooms?.map(room => {
              const divStyle = {
                color: 'white',
@@ -27,8 +29,15 @@ import './Carrousel.scss'
     <div><h2>{room?.name}</h2></div>
 <div><p>{room?.history}</p></div>
  
+<span>
+                  <NavLink to= {`/room/${room?.id}`} activeClassName="isActive" exact>
+                  <Button  className="secondButton" type="dashed">More info</Button></NavLink> 
+                  <NavLink to= {`/steps/${room?.id}`} activeClassName="isActive" exact>
+                  <Button className="primaryButton" type="primary">Book now</Button></NavLink>
+                  </span>
 </div>
-
+                  
+               
 </Fragment>
              
                )

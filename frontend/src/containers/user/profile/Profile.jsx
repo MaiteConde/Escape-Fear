@@ -22,7 +22,6 @@ const Profile = ({user}) => {
     return (
         <div className="profile">
             <img src={image} alt=""/>
-            <ModalPhoto/>
             <h2>Info:</h2>
           <p>Name:  {user?.name}</p> 
            <p> Email: {user?.email}</p>
@@ -53,7 +52,8 @@ const Profile = ({user}) => {
 
                </div>}
            )}
-           
+                       <ModalPhoto/>
+
            <NavLink to= {`/editprofile`} activeClassName="isActive" exact>
                
               <Button className="primaryButton">Edit profile</Button>

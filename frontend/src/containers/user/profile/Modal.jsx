@@ -29,7 +29,7 @@ class ModalPhoto extends React.Component {
   render() {
     return ( 
       <div>
-        <Button className="secondButton"  type="primary" onClick={this.showModal}>
+        <Button className="secondButton"  type="dashed" onClick={this.showModal}>
           Edit photo
         </Button>
   
