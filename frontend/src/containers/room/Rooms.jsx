@@ -43,7 +43,7 @@ const Rooms = ({rooms}) => {
                   <Button className="primaryButton" type="primary">Book now</Button></NavLink>
                   </div>
                 </Card>
- 
+  
     )
                    
                    

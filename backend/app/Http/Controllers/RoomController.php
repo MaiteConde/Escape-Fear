@@ -23,10 +23,7 @@ class RoomController extends Controller
     public function insert(Request $request)
     {
         try {
-            $body = $request->all(); //req.body
-            // dump($body);//dump() y dd() son de laravel, var_dump() de php, dd() corta el flujo
-
-        
+            $body = $request->all(); 
             $room = Room::create($body);
             return $room;
         } catch (\Exception $e) {

@@ -46,6 +46,8 @@
     display: flex;
     padding: 2em;
     justify-content: center;
+   
+
 }
  
 .ant-card-bordered {
@@ -62,6 +64,8 @@
     }
 }
 .homeInfo{
+  
+
     h2 {
         text-align: center;
         margin: 2em;
@@ -84,4 +88,24 @@
 }
 .primaryButton {
    background-color: $Solid;
+}
+
+h4 {
+    color: #ffc654
+}
+.content {
+    padding: 2em;
+    background-color: whitesmoke;
+    color: black;
+}
+.icons{
+    background-color: whitesmoke;
+color: black;
+    padding: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    img {
+        width: 5em;
+        margin: 1em;
+    }
 }

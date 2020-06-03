@@ -1,0 +1,10 @@
+@import '../colors.scss';
+
+.footer {
+    height: 8em;
+    background-color: $otro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}

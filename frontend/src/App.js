@@ -12,6 +12,7 @@ import { NotFound } from './components/NotFound';
 import Profile from './containers/user/profile/Profile';
 import Edit from './containers/user/profile/EditProfile';
 import EditPhoto from './containers/user/profile/EditPhoto';
+import Footer from './components/Footer';
 
 
 
@@ -43,6 +44,7 @@ function App() {
        
       </Switch>
     </BrowserRouter>
+    <Footer/>
 
     
   </div>
