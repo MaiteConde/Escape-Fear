@@ -33,12 +33,14 @@ Route::prefix('v1')->group( function () {
         'prefix' => 'rooms',
     ], function () {
         Route::get('/', 'RoomController@getAll');
-        Route::post('/', 'RoomController@insert');
         Route::get('/{id}', 'RoomController@getById');
-
+        
         Route::middleware(['auth:api','checkRole:admin'])->group(function ()
         {
+        Route::post('/', 'RoomController@insert');
         Route::put('/{id}', 'RoomController@update');
+        Route::delete('/{id}', 'RoomController@delete');
+
         });
 
     });

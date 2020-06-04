@@ -14,13 +14,13 @@ export default function Login(props) {
         notification.success({ message: 'Connected successfully', description: 'Welcome'})
     // localStorage.setItem('authToken',res.data.token)
     setTimeout(() => {
-        props.history.push('')
+        props.history.push('/profile')
     }, 2000);
 })      
 .catch(err =>{
     notification.error({ message: 'Failed connection', description: 'Incorrect User or Password'})
     setTimeout(() => {
-        props.history.push('/');
+        props.history.push('/profile');
         console.error(err)})
     }, 2000);}
       const onFinishFailed = errorInfo => {

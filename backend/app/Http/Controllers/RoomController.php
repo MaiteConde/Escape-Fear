@@ -15,7 +15,7 @@ class RoomController extends Controller
     }
 
 
-    public function getById(Request $request, $id) 
+    public function getById($id) 
     { 
         $room = Room::with('category', 'assessment.user')->find($id);
         return $room;
@@ -59,7 +59,6 @@ class RoomController extends Controller
             $body = $request->all();
             $room = Room::find($id);
             $room -> update($body);
-           
             return response($room->load('category', 'assessment.user'));
         } catch (\Exception $e) {
             return response([

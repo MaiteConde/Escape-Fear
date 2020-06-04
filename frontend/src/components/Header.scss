@@ -1,15 +1,23 @@
-.ant-menu-horizontal {
-   display: flex;
-   justify-content: center;
+nav {
+    display: flex;
+    justify-content: flex-end;
    align-items: center;
-   border-bottom: 1px solid #f0f0f000;
-
-    height: 5em;
- background-image: url(https://images.wallpaperscraft.com/image/forest_fog_trees_147805_3840x2160.jpg);
- 
-}
-a {
-    color: whitesmoke !important;
+   height: 6em;
+    a {
+        font-size: 1.2em;
+        color: whitesmoke !important;
+        padding: 4em;
+    }
 }
 
 
+@media (max-width: 600px) {
+
+    nav{
+        display: flex;
+        justify-content: center;
+        a{
+            padding: 1em;
+        }
+    }
+}

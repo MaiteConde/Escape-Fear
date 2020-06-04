@@ -62,5 +62,32 @@
 
 
 
+@media (max-width: 600px) {
+
+    .room {
+        width: 100%;
+    }
+    .buttonsRoom {
+    margin: 0; 
+    }
+    ul {
+        padding: 0;
+    }
+
+    .assessments {
+        width: 80%;
+       text-align: left;
+    }
+    .room img {
+        width: 100%;
+        height: 95vh;
+    }
+    .info {
+       
+        top: 25em;
+        left: 5em;
+
+    }
+}
 
 

@@ -17,3 +17,10 @@
 
 }
 
+@media (max-width: 600px) {
+
+    .ant-carousel {
+       display: none;
+    }
+}
+

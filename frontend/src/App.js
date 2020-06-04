@@ -13,6 +13,10 @@ import Profile from './containers/user/profile/Profile';
 import Edit from './containers/user/profile/EditProfile';
 import EditPhoto from './containers/user/profile/EditPhoto';
 import Footer from './components/Footer';
+import Logued from './guards/Logued';
+import Admin from './guards/Admin';
+
+
 
 
 
@@ -27,13 +31,22 @@ function App() {
       <Route exact path='/' component={Home} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
-        <Route path='/profile' component={Profile} />
         <Route path='/editprofile' component={Edit} />
         <Route path='/editprofilephoto' component={EditPhoto} />
-
-        <Route path='/steps/:id' component={ReserSteps} />
         <Route path='/rooms' component={Rooms} />
         <Route path='/room/:id' component={Room} />
+        <Logued>
+            <Switch>
+              <Route path="/profile" component={Profile} exact />
+              <Route path='/steps/:id' component={ReserSteps} />
+            </Switch>
+          </Logued>
+
+          <Admin>
+            <Switch>
+              
+            </Switch>
+          </Admin>
 
         <Route exact path='*' component={NotFound} />
 

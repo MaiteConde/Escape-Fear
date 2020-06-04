@@ -4,3 +4,10 @@ h2 {
     font-family: 'Megrim', cursive;  
     color: $Solid;
 }
+
+
+@media (max-width: 600px) {
+    .footer {
+        display: none !important;
+    }
+}
