@@ -14,7 +14,9 @@ import Edit from './containers/user/profile/EditProfile';
 import EditPhoto from './containers/user/profile/EditPhoto';
 import Footer from './components/Footer';
 import Logued from './guards/Logued';
-import Admin from './guards/Admin';
+import AdminControl from './guards/AdminControl';
+import Admin from './containers/admin/Admin';
+import  EditRoom  from './containers/admin/EditRoom';
 
 
 
@@ -35,26 +37,23 @@ function App() {
         <Route path='/editprofilephoto' component={EditPhoto} />
         <Route path='/rooms' component={Rooms} />
         <Route path='/room/:id' component={Room} />
+        <Route path='/EditRoom/:id' component={EditRoom} />
+
+
+          {/* <AdminControl>
+            <Switch>
+            </Switch>
+          </AdminControl> */}
+
         <Logued>
             <Switch>
+          <Route path='/admin' component={Admin} />
               <Route path="/profile" component={Profile} exact />
               <Route path='/steps/:id' component={ReserSteps} />
             </Switch>
           </Logued>
-
-          <Admin>
-            <Switch>
-              
-            </Switch>
-          </Admin>
-
         <Route exact path='*' component={NotFound} />
 
-        
-        
-
-        
-       
       </Switch>
     </BrowserRouter>
     <Footer/>

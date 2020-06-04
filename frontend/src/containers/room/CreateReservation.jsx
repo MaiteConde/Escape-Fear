@@ -51,7 +51,7 @@ const CreateReservation = ({room, user, totalP, reserDate}) => {
         })
     }
     return (
-        <Button type="primary"  onClick={handleSubmit}>
+        <Button className="primaryButton"  type="dashed" onClick={handleSubmit}>
         Reserve
       </Button>
         

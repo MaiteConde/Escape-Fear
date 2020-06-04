@@ -62,14 +62,19 @@ if(room?.id != id ){  getRoomById(id); return <div id="preloader">
  <div>
  <h2>Assessments:</h2>
  {room?.assessment?.length == 0?
-<div> <h2>Be the first in write and assessment!</h2></div>: ''}
+<div> <h4>Be the first to write an assessment!</h4></div>: ''}
 
   {room?.assessment?.map((assessment => {
+     const image = `http://localhost:8000/images/profile/${assessment?.user?.image_path}`;
     return (
       <div className="assessments">
     
-                  <div className="ass">
+                  <div className="ass"> 
+                  <div className="user">
+                    <img src={image} alt=""/>
                   <p> {assessment?.user?.name} said:</p>
+
+                  </div>
                    <p>{assessment?.assessment}</p> 
                     <Rate disabled value = {assessment?.points}/>
                     </div> 

@@ -19,7 +19,11 @@ const Header = ({user}) =>  {
            <NavLink to='/' activeClassName="isActive" exact>Home</NavLink>
            <NavLink to='/profile' activeClassName="isActive" exact>Profile</NavLink>
            <NavLink to='' onClick={logout}>Logout</NavLink>
+{
+  user?.role === 'admin' ?
+  <NavLink to='/admin' activeClassName="isActive" exact>Admin</NavLink>: ''
 
+}
      </div>
      
     }

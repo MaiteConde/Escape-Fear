@@ -30,6 +30,27 @@ export const getRoomById = async (id) => {
 return res;
 }
 
+export const editRoom = async (room, id) => {
+    await axios.put(API_URL + `rooms/${id}`, room, {
+          headers: {
+            Authorization: 'Bearer ' + localStorage.getItem('authToken')
+          } 
+      }) 
+    // return getAllRooms();
+   
+      }
+
+      export const deleteRoom = async (id) => {
+        
+        const res = await axios.delete(API_URL + `rooms/${id}`,{
+               headers: {
+                   Authorization: 'Bearer '+ localStorage.getItem('authToken')
+               }
+           }) 
+ return res.data.message
+        
+           }
+
 export const totalPrice = async (value) => {
     store.dispatch({
         type: 'TOTAL_PRICE',
@@ -45,4 +66,4 @@ export const totalPrice = async (value) => {
         payload: selectedValue
       
     })
-};
+}; 

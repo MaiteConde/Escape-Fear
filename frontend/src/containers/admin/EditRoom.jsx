@@ -3,22 +3,23 @@ import 'antd/dist/antd.css';
 import { notification } from 'antd';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { Link } from 'react-router-dom';
-import './Profile.scss'
-import { editProfile } from '../../../redux/actions/users';
+import { editRoom } from '../../redux/actions/rooms';
 
 export default function Edit(props) {
-    const onFinish = (user) => {
-      editProfile(user)
+    const id = props.match.params.id
+
+    const onFinish = (room) => {
+      editRoom(room, id) 
     .then(res => {
-        notification.success({ message: 'Connected successfully', description: 'Welcome'})
+        notification.success({ message: 'Edited successfully', description: 'Nice!'})
     setTimeout(() => {
         props.history.push('')
     }, 2000);
 })      
 .catch(err =>{
-    notification.error({ message: 'Failed connection', description: 'Incorrect User or Password'})
+    notification.error({ message: 'Error'})
     setTimeout(() => {
-        props.history.push('/profile');
+        props.history.push('/');
         console.error(err)})
     }, 2000);}
       const onFinishFailed = errorInfo => {
@@ -37,8 +38,8 @@ export default function Edit(props) {
         >
              <h1 >Edit Profile</h1>
           <Form.Item
-            label="email"
-            name="email"
+            label="name"
+            name="name"
             rules={[
              
             ]}
@@ -47,8 +48,28 @@ export default function Edit(props) {
           </Form.Item>
     
           <Form.Item
-            label="name"
-            name="name"
+            label="history"
+            name="history"
+            rules={[
+           
+            ]}
+          >
+            <Input />
+          </Form.Item>
+
+          <Form.Item
+            label="time"
+            name="time"
+            rules={[
+           
+            ]}
+          >
+            <Input />
+          </Form.Item>
+
+          <Form.Item
+            label="time"
+            name="time"
             rules={[
            
             ]}
@@ -57,12 +78,12 @@ export default function Edit(props) {
           </Form.Item>
     
           <Form.Item {...tailLayout}>
-            <Button className="primaryButton" type="primary" htmlType="submit">
-              Edit
+            <Button  htmlType="submit">
+              Submit
             </Button>
           </Form.Item>
         
-        </Form> 
+        </Form>
         
         </div>
       );
@@ -83,4 +104,3 @@ const tailLayout = {
     span: 16,
   },
 };
-

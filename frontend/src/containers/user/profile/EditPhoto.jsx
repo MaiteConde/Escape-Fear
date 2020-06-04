@@ -30,7 +30,9 @@ function EditPhoto(props) {
         <div className="editPhotoProfile">
         <form action="" onSubmit={handleSubmit}>
             <input type="file"  id="imageInput"  name="img"/>
-                <Button>  <input  type="submit" /></Button>
+            <Button className="primaryButton" type="primary" htmlType="submit">
+              Edit photo
+            </Button>
               
                   
                 </form>

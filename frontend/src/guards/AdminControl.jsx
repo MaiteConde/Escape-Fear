@@ -1,10 +1,9 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import { notification } from 'antd';
 import { connect } from 'react-redux';
 
  
-const Admin = ({ children, user }) => {
+const AdminControl = ({ children, user }) => {
 const userRole = user?.role
  
   return userRole === 'admin' ?  children : (
@@ -18,4 +17,4 @@ const userRole = user?.role
 
 
 const mapStateToProps = ({user}) => ({ user: user?.user });
-export default connect(mapStateToProps)(Admin);
+export default connect(mapStateToProps)(AdminControl);

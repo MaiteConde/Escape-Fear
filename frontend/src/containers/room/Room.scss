@@ -38,6 +38,18 @@
     border-left: solid $Solid 0.5em;
     border-radius: 0.2em;
     background-color: rgba(245, 245, 245, 0.24);
+    img {
+        width: 4em;
+        height: 4em;
+        border-radius: 50%;
+    }
+}
+.user {
+    display: flex;
+    align-items: center;
+    p {
+        padding: 1em;
+    }
 }
 
 .roomInfo {
@@ -80,14 +92,11 @@
     }
     .room img {
         width: 100%;
-        height: 95vh;
+        height: 100vh;
     }
-    .info {
-       
-        top: 25em;
-        left: 5em;
+   
 
     }
-}
+
 
 

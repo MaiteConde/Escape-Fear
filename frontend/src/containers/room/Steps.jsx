@@ -43,6 +43,7 @@ const steps = [
     title: 'Last',
     content:<Fragment>
       <h2>Reservation resume:</h2>
+      <br/>
        <Room /> 
       <h2>Date:</h2>
       {/* <CreateReservation  /> */}
