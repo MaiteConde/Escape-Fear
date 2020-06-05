@@ -10,12 +10,16 @@ const Header = ({user}) =>  {
  
   return <nav>
     {!user?.id ?
-    <div>
+    <div> 
+      {/* <span> <img src="https://image.flaticon.com/icons/png/512/70/70712.png" alt=""/> <p>Escape Room</p></span> */}
+     
     <NavLink to='/' activeClassName="isActive" exact>Home</NavLink>
      <NavLink to='/login' activeClassName="isActive" exact>Login</NavLink>
      <NavLink to='/register' activeClassName="isActive" exact>Register</NavLink>
      </div>:  
      <div>
+      {/* <span> <img src="https://image.flaticon.com/icons/png/512/70/70712.png" alt=""/> Escape Room</span> */}
+
            <NavLink to='/' activeClassName="isActive" exact>Home</NavLink>
            <NavLink to='/profile' activeClassName="isActive" exact>Profile</NavLink>
            <NavLink to='' onClick={logout}>Logout</NavLink>

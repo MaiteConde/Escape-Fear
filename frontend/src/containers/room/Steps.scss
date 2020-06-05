@@ -5,6 +5,10 @@ h2 {
     color: $Solid;
 }
 
+.steps {
+    min-height: 74vh;
+}
+
 
 @media (max-width: 600px) {
     .footer {

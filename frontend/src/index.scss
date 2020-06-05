@@ -172,4 +172,14 @@ margin: 3em;
 color: $Solid !important;
 }
 
-    
+
+::-webkit-scrollbar {
+  border: $Solid solid; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border: $Dark solid; 
+  border-radius: 10px;
+  background-color: $otro;
+
+}

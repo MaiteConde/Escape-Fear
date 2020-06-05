@@ -21,10 +21,10 @@
     display: flex;
     justify-content: space-around;
     position: absolute;
-    top: 10em;
+    top: 13em;
     left: 1em;
     h2{
-        font-size: 5em;
+        font-size: 3em;
     }
     width: 70%;
 }
@@ -92,10 +92,15 @@
     }
     .room img {
         width: 100%;
-        height: 100vh;
+        height: 116vh;
     }
-   
-
+    .roomInfo{
+        top: 0em;
+    }
+  
+.roomInfo {
+    top: 15em;
+}
     }
 
 
