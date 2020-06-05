@@ -42,12 +42,12 @@ export const editRoom = async (room, id) => {
 
       export const deleteRoom = async (id) => {
         
-        const res = await axios.delete(API_URL + `rooms/${id}`,{
+        await axios.delete(API_URL + `rooms/${id}`,{
                headers: {
                    Authorization: 'Bearer '+ localStorage.getItem('authToken')
                }
            }) 
- return res.data.message
+
         
            }
 

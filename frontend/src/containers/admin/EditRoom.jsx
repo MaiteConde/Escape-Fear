@@ -36,7 +36,7 @@ export default function Edit(props) {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-             <h1 >Edit Profile</h1>
+             <h1 >Edit Room</h1>
           <Form.Item
             label="name"
             name="name"

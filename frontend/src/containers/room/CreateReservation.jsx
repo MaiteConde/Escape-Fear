@@ -34,6 +34,7 @@ const CreateReservation = ({room, user, totalP, reserDate}) => {
         const reservation = {
             persons: totalP,
             date: moment(reserDate).format('YYYY/MM/DD'),
+            hour: '15:00',
             user_id: user?.id,
             room_id: id,
             price: totalA(totalP) 

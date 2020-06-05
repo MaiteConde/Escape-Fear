@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Reservation;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Mail\ReservationShipped;
+use Illuminate\Support\Facades\Mail;
+
+
 
 class ReservationController extends Controller
 {
@@ -17,12 +21,14 @@ class ReservationController extends Controller
     public function insert(Request $request, $id)
     {
         try {
-            $body = $request->all(); //req.body
+            $body = $request->all(); 
             
            
             $body['room_id'] = $id;
             $body['user_id'] = Auth::id();
             $reservation = Reservation::create($body);
+            Mail::to($reservation->user->email)->send(new ReservationShipped($reservation));
+
             return $reservation;
       } catch (\Exception $e) {
             return response([

@@ -67,8 +67,8 @@ export default function Login(props) {
         
     
           <Form.Item {...tailLayout}>
-            <Button  htmlType="submit">
-              Submit
+            <Button className="primaryButton" htmlType="submit">
+              Login
             </Button>
           </Form.Item>
           <span className="redirección">Still without an account?  <Link to='register'>Register</Link></span>

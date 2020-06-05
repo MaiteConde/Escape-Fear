@@ -98,6 +98,7 @@ return [
     | of the emails. Or, you may simply stick with the Laravel defaults!
     |
     */
+   
 
     'markdown' => [
         'theme' => 'default',
@@ -107,4 +108,5 @@ return [
         ],
     ],
 
+   
 ];

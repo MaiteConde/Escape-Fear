@@ -3,7 +3,7 @@ import { getAllRooms, deleteRoom } from '../../redux/actions/rooms'
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { Button } from 'antd';
-
+import './Admin.scss'
 import { Card } from 'antd';
 
 // import '../containers/home/Home.scss'

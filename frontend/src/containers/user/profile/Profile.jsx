@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getInfo, logout } from '../../../redux/actions/users';
 import { NavLink } from 'react-router-dom';
 import './Profile.scss'
+import {useHistory} from 'react-router-dom'
 import ModalPhoto from './Modal';
 import { DeleteFilled } from '@ant-design/icons';
 import { deleteReservation } from '../../../redux/actions/reservations';
@@ -11,6 +12,7 @@ import { Button } from 'antd';
 
 
 const Profile = ({user}) => {
+  const history = useHistory();
     useEffect(() => {
         getInfo()
      }, [])
@@ -22,6 +24,13 @@ const Profile = ({user}) => {
     return (
         <div className="profile">
             <img src={image} alt=""/>
+            <ModalPhoto/>
+
+<NavLink to= {`/editprofile`} activeClassName="isActive" exact>
+    
+   <Button className="primaryButton">Edit profile</Button>
+    
+</NavLink>
             <h2>Info:</h2>
           <p>Name:  {user?.name}</p> 
            <p> Email: {user?.email}</p>
@@ -52,13 +61,7 @@ const Profile = ({user}) => {
 
                </div>}
            )}
-                       <ModalPhoto/>
-
-           <NavLink to= {`/editprofile`} activeClassName="isActive" exact>
-               
-              <Button className="primaryButton">Edit profile</Button>
-               
-  </NavLink>
+                      
   
         </div> 
     )

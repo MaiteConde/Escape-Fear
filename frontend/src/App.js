@@ -45,13 +45,13 @@ function App() {
             </Switch>
           </AdminControl> */}
 
-        <Logued>
-            <Switch>
+        {/* <Logued>
+            <Switch> */}
           <Route path='/admin' component={Admin} />
               <Route path="/profile" component={Profile} exact />
               <Route path='/steps/:id' component={ReserSteps} />
-            </Switch>
-          </Logued>
+            {/* </Switch>
+          </Logued> */}
         <Route exact path='*' component={NotFound} />
 
       </Switch>
