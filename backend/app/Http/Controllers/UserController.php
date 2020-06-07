@@ -108,4 +108,27 @@ class UserController extends Controller
         }
     }
 
+
+    public function restore($id)
+    {
+        try {
+            $users = User::withTrashed()->where('id', $id)->get();
+            
+            if ($users->isEmpty() || !$users[0]->trashed()) {
+                return response([
+                    'message' => 'Couldnt find the product'
+                ], 400);
+            }
+            $user = $users[0];
+            $user->restore();
+            return response([
+                'message' => 'User recovered',
+                'product' => $user
+            ], 400);
+        } catch (\Exception $e) {
+            return response([
+                'error' => $e,
+            ], 500);
+        }
+    }
 }

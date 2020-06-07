@@ -18,6 +18,7 @@ Route::prefix('v1')->group( function () {
             Route::get('/info','UserController@getUserInfo');
             Route::put('/update', 'UserController@update');
             Route::delete('/{id}', 'UserController@delete');
+            Route::get('restore/{id}','UserController@restore');
 
         });
     });

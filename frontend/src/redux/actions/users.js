@@ -4,6 +4,7 @@ import axios from 'axios';
 import { notification } from 'antd';
 
 import { API_URL } from '../../api-config';
+import { getAllRooms } from './rooms';
 
 export const login = async(user) => {
     try {
@@ -85,63 +86,22 @@ export const editProfilePhoto = async (formData) => {
        
           }
 
-// export const getInfoId = async (id) => {
-//     const res = await axios.get(API_URL + `users/user/${id}`, {
-//         headers: {
-//             Authorization: localStorage.getItem('authToken')
-//         }
-//     }) 
-//     store.dispatch({
-//         type: 'GET_INFO_ID',
-//         user:res.data
-//     })
-// return res;
-// }
 
-
-
-// export const giveValuation = async (valuation, id) => {
-//         await axios.put(API_URL + `users/valuation/${id}`, valuation,{
-//             headers: {
-//                 Authorization: localStorage.getItem('authToken')
-//             }
-//         }) 
-//         return getInfoId(id)
-//     }
-
-// export const sendMessage = async(message, userId) => {
-//         return axios.post(API_URL + `messages/${userId}`, message, {
-//             headers: {
-//             Authorization: localStorage.getItem('authToken')
-//         }})
-//     }
-
-//     export const getMEssages = async () => {
-//         const res = await axios.get(API_URL + 'messages/get', {
-//             headers: {
-//                 Authorization: localStorage.getItem('authToken')
-//             }
-//         }) 
-//         store.dispatch({
-//             type: 'GET_MESSAGES',
-//             messages:res.data
-//         })
-//     return res;
-//     }
-
-//     export const getMEssage = async (id) => {
-//         const res = await axios.get(API_URL + `messages/message/${id}`, {
-//             headers: {
-//                 Authorization: localStorage.getItem('authToken')
-//             }
-//         }) 
-//         store.dispatch({
-//             type: 'GET_MESSAGE',
-//             messages:res.data
-//         })
-//     return res;
-//     }
-
+          export const deleteUser = async (id) => {
+            try {
+              await axios.delete(API_URL + `users/${id}`,{
+                    headers: {
+                        Authorization: 'Bearer '+ localStorage.getItem('authToken')
+                    }
+                })  
+             getAllRooms()
+             getAllUsers()
+            } catch (error) {
+                console.error(error)
+            }
+          
+               }
+    
 
 
     

@@ -1,6 +1,6 @@
 import React, { useEffect, Fragment } from 'react'
 import { getAllRooms, deleteRoom } from '../../redux/actions/rooms'
-import { getAllUsers} from '../../redux/actions/users'
+import { getAllUsers, deleteUser} from '../../redux/actions/users'
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { Button } from 'antd';
@@ -62,7 +62,7 @@ const Admin = ({rooms, users}) => {
                     <p>
                       Mail: {user.email}
                     </p>
-                    <Button   className="secondButton" type="dashed">Delete</Button>
+                    <Button onClick={() => deleteUser(user.id)}  className="secondButton" type="dashed">Delete</Button>
                  </div>
                )
              }))}
