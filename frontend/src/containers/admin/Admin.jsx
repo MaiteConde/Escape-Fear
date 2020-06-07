@@ -38,7 +38,7 @@ const Admin = ({rooms}) => {
                   <span>  {room?.persons} players / {room?.category.name} / {room?.time} </span>    
                   <div className="buttons">
                   
-                  <Button  onClick={deleteRoom} className="secondButton" type="dashed">Delete</Button>
+                  <Button  onClick={() => deleteRoom(room?.id)} className="secondButton" type="dashed">Delete</Button>
                   <NavLink to= {`/editroom/${room?.id}`} activeClassName="isActive" exact>
                   <Button className="primaryButton" type="primary">Edit</Button></NavLink>
                   </div> 

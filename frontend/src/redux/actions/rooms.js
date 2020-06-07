@@ -41,14 +41,14 @@ export const editRoom = async (room, id) => {
    
       }
 
-      export const deleteRoom = async (id, userId) => {
+      export const deleteRoom = async (id) => {
         try {
           await axios.delete(API_URL + `rooms/${id}`,{
                 headers: {
                     Authorization: 'Bearer '+ localStorage.getItem('authToken')
                 }
-            }) 
-          return getInfo(userId)
+            })  
+         getAllRooms()
         } catch (error) {
             console.error(error)
         }

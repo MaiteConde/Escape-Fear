@@ -36,15 +36,18 @@ const Home = ({rooms}) => {
       <div className="icons">
         <div>
         <img src="https://image.flaticon.com/icons/png/512/124/124607.png" alt=""/>
-        <p>Full-Sensory Experience</p>
+        <h5>Full-Sensory Experience</h5>
+        <p>This ain't just locks and keys</p>
         </div>
        <div>
         <img src="https://image.flaticon.com/icons/png/512/112/112757.png" alt=""/>
-         <p>Vast Environments</p>
+         <h5>Vast Environments</h5>
+         <p>No escape closest here! Large, multi-room games for you to explore</p>
        </div>
        <div>
         <img src="https://image.flaticon.com/icons/png/512/90/90216.png" alt=""/>
-      <p>Immersive Storytelling</p>
+      <h5>Immersive Storytelling</h5>
+      <p>Become part of the story, solving it from the inside</p>
        </div>
       </div>
       {/* <SimpleMap/> */}

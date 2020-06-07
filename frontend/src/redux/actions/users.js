@@ -35,8 +35,7 @@ export const logout = async() => {
     store.dispatch({
         type: 'LOGOUT'
     })
-    
-   
+ 
 }
 
 export const getInfo = async () => {
