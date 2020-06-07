@@ -51,6 +51,19 @@ export const getInfo = async () => {
 return res;
 }
 
+export const getAllUsers = async () => {
+    const res = await axios.get(API_URL + 'users', {
+        headers: {
+            Authorization: 'Bearer ' + localStorage.getItem('authToken')
+        }
+    }) 
+    store.dispatch({
+        type: 'ALL_USERS',
+        payload:res.data
+    })
+return res;
+}
+
 
 export const editProfile = async (user) => {
     await axios.put(API_URL + 'users/update', user, {

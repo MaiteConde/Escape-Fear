@@ -6,6 +6,11 @@ const userReducer = (state = {}, action) => {
                 ...state,
                 user: action.user
             }
+            case 'ALL_USERS':
+                return {
+                    ...state,
+                    users: action.payload
+                }
             case 'GET_INFO':
                 return {
                     ...state,

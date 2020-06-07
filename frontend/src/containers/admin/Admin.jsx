@@ -1,5 +1,6 @@
 import React, { useEffect, Fragment } from 'react'
 import { getAllRooms, deleteRoom } from '../../redux/actions/rooms'
+import { getAllUsers} from '../../redux/actions/users'
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { Button } from 'antd';
@@ -9,9 +10,10 @@ import { Card } from 'antd';
 // import '../containers/home/Home.scss'
 const { Meta } = Card;
 
-const Admin = ({rooms}) => {
+const Admin = ({rooms, users}) => {
     useEffect(() => {
         getAllRooms()
+        getAllUsers()
      }, [])
      
      if(!rooms){
@@ -25,10 +27,10 @@ const Admin = ({rooms}) => {
        <div className="full">
        
               
-       
+       <h2>Rooms</h2>
+       <div className="rooms">
             { rooms?.map(room => {
                 return (
-               
                   <Card
                   
                   style={{ width: 240 }}
@@ -43,16 +45,31 @@ const Admin = ({rooms}) => {
                   <Button className="primaryButton" type="primary">Edit</Button></NavLink>
                   </div> 
                 </Card>
-  
     )
-                   
-                   
-                 })
-             }
+    
+    
+  })
+  
+}
+</div>
+<h2>Users:</h2>
+             {users?.map((user=> {
+               return (
+                 <div className="users">
+                  <p>
+                   Name: {user.name}
+                    </p> 
+                    <p>
+                      Mail: {user.email}
+                    </p>
+                    <Button   className="secondButton" type="dashed">Delete</Button>
+                 </div>
+               )
+             }))}
              </div>       
            
      )
  }
  
-const mapStateToProps = ({rooms}) =>({rooms:rooms?.rooms});
+const mapStateToProps = ({rooms, user}) =>({rooms:rooms?.rooms, users: user?.users});
 export default connect(mapStateToProps)  (Admin);

@@ -1,3 +1,23 @@
 .full {
     min-height: 74vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rooms {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    align-items: center;
+}
+
+.users {
+    background-color: rgba(240, 231, 231, 0.185);
+    text-align: left;
+    padding: 2em;
+    width: 50%;
+    border-left: black solid 0.5em;
 }

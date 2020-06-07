@@ -10,6 +10,13 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+
+    public function getAllUsers()
+    { 
+       $user = User::with('assessments')->get();
+        return $user;
+    }
+
     public function register(Request $request)
     {
         $body = $request->all();
@@ -83,4 +90,22 @@ class UserController extends Controller
             ], 500);
         }
     } 
+
+    public function delete($id)
+    {
+        try {
+            $user = User::find($id) -> delete() ;
+            
+            return response([
+                'message' => 'user deleted',
+                'room' => $user
+            ]);
+        } catch (\Exception $e) {
+            return response([
+                'error' => $e->getMessage()
+            ], 500);
+        
+        }
+    }
+
 }

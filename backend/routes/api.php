@@ -10,12 +10,15 @@ Route::prefix('v1')->group( function () {
         Route::post('/register', 'UserController@register');
         Route::post('/login', 'UserController@login');
 
-        Route::middleware('auth:api')->group(function ()
+        Route::middleware(['auth:api','checkRole:admin'])->group(function ()
         {
+            Route::get('/', 'UserController@getAllUsers');
             Route::post('/image','UserController@uploadImage'); 
             Route::get('/logout','UserController@logout');
             Route::get('/info','UserController@getUserInfo');
             Route::put('/update', 'UserController@update');
+            Route::delete('/{id}', 'UserController@delete');
+
         });
     });
 
