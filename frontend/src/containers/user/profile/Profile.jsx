@@ -9,10 +9,13 @@ import { DeleteFilled } from '@ant-design/icons';
 import { deleteReservation } from '../../../redux/actions/reservations';
 import { Popconfirm, message } from 'antd';
 import { Button } from 'antd';
+import { Card, Avatar } from 'antd';
+
 
 
 const Profile = ({user}) => {
   const history = useHistory();
+  
     useEffect(() => {
         getInfo()
      }, [])
@@ -22,8 +25,17 @@ const Profile = ({user}) => {
         message.error('Click on No');
       }
     return (
+
         <div className="profile">
+          <Card>
             <img src={image} alt=""/>
+
+            <h2>Info:</h2>
+          <p>Name:  {user?.name}</p> 
+           <p> Email: {user?.email}</p>
+          </Card>
+
+          <div className="buttonsProf">
             <ModalPhoto/>
 
 <NavLink to= {`/editprofile`} activeClassName="isActive" exact>
@@ -31,38 +43,16 @@ const Profile = ({user}) => {
    <Button className="primaryButton">Edit profile</Button>
     
 </NavLink>
-            <h2>Info:</h2>
-          <p>Name:  {user?.name}</p> 
-           <p> Email: {user?.email}</p>
-           {user?.reservations.map((reservation) =>
-           {return <div>
-               <h2>Reservations:</h2>
-               <Popconfirm
-    title= "Are you sure?"
-    onConfirm= {() =>deleteReservation(reservation?.id)}
-    onCancel={cancel}
-    okText="Yes"
-    cancelText="No"
-  >
-    <a href="#"><DeleteFilled /></a>
-  </Popconfirm> 
-           <NavLink to= {`/room/${reservation?.room?.id}`} activeClassName="isActive" exact><p>Room: {reservation?.room?.name} </p>
+
+<NavLink to= {`/reservations`} activeClassName="isActive" exact>
+    
+   <Button className="primaryButton">My reservation</Button>
+    
 </NavLink>
 
-
-
-  
-             <p> Players: {reservation?.persons}</p> 
-            <p> Date: {reservation?.date} </p>   
-            
-           
-
-
-
-               </div>}
-           )}
-                      
-  
+          </div>
+          
+       
         </div> 
     )
 }

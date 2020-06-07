@@ -2,6 +2,7 @@
 import store from '../store';
 import axios from 'axios';
 import { API_URL } from '../../api-config';
+import { getInfo } from './users';
 
 export const getAllRooms = async () => {
     try {
@@ -40,15 +41,18 @@ export const editRoom = async (room, id) => {
    
       }
 
-      export const deleteRoom = async (id) => {
-        
-        await axios.delete(API_URL + `rooms/${id}`,{
-               headers: {
-                   Authorization: 'Bearer '+ localStorage.getItem('authToken')
-               }
-           }) 
-
-        
+      export const deleteRoom = async (id, userId) => {
+        try {
+          await axios.delete(API_URL + `rooms/${id}`,{
+                headers: {
+                    Authorization: 'Bearer '+ localStorage.getItem('authToken')
+                }
+            }) 
+          return getInfo(userId)
+        } catch (error) {
+            console.error(error)
+        }
+      
            }
 
 export const totalPrice = async (value) => {

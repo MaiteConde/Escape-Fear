@@ -17,6 +17,7 @@ import Logued from './guards/Logued';
 import AdminControl from './guards/AdminControl';
 import Admin from './containers/admin/Admin';
 import  EditRoom  from './containers/admin/EditRoom';
+import Myreservations from './containers/user/profile/Myreservations';
 
 
 
@@ -42,14 +43,16 @@ function App() {
         <Logued>
             <Switch>
               
-          <AdminControl>
+              <Route path="/profile" component={Profile} exact />
+              <Route path="/reservations" component={Myreservations} exact />
+              <Route path='/steps/:id' component={ReserSteps} />
+
+              <AdminControl>
             <Switch>
           <Route path='/admin' component={Admin} />
             </Switch>
           </AdminControl>
 
-              <Route path="/profile" component={Profile} exact />
-              <Route path='/steps/:id' component={ReserSteps} />
             </Switch>
           </Logued>
 

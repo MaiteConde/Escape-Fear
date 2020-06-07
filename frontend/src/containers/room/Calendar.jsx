@@ -38,7 +38,7 @@ class ReservationCalendar extends React.Component {
     const { value, selectedValue } = this.state;
     reservDate(selectedValue)
 
-   const dates = this.props.reservations.map((res => res.date))
+   const dates = this.props?.reservations?.map((res => res.date))
    
     return (
       <div>
@@ -46,7 +46,7 @@ class ReservationCalendar extends React.Component {
  <Calendar value={value} onSelect={this.onSelect} onPanelChange={this.onPanelChange}
        disabledDate={ current => {
          
-        let index = dates.findIndex(date => date === moment(current).format('YYYY-MM-DD'))
+        let index = dates?.findIndex(date => date === moment(current).format('YYYY-MM-DD'))
         return index !== -1 && true
 
        }

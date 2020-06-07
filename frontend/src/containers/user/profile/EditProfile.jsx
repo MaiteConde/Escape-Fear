@@ -3,7 +3,7 @@ import 'antd/dist/antd.css';
 import { notification } from 'antd';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { Link } from 'react-router-dom';
-import './Profile.scss'
+import './editProfile.scss'
 import { editProfile } from '../../../redux/actions/users';
 
 export default function Edit(props) {
@@ -12,7 +12,7 @@ export default function Edit(props) {
     .then(res => {
         notification.success({ message: 'Connected successfully', description: 'Welcome'})
     setTimeout(() => {
-        props.history.push('')
+        props.history.push('/profile')
     }, 2000);
 })      
 .catch(err =>{

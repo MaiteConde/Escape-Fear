@@ -10,11 +10,11 @@ export const login = async(user) => {
         const res = await axios.post(API_URL + 'users/login', user)
         store.dispatch({
             type: 'LOGIN',
-            user: res.data
+            user: res.data[0]
         })
-        localStorage.setItem('authToken', res.data.token);
+        localStorage.setItem('authToken', res.data[1]);
         notification.success({ message: 'Connected successfully', description: 'Welcome' })
-            
+            return res;
     } catch (error) {
         console.error(error)
         notification.error({ message: 'Failed connection', description: 'Incorrect User or Password' })

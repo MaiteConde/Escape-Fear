@@ -98,17 +98,17 @@ class ReserSteps extends React.Component {
 
              {  this.props.totalP == 3 ?
              <h2>
-               {this.props.totalP * 18}
+               {this.props.totalP * 18  } €
              </h2>: ''
              }
               {  this.props.totalP == 4 ?
              <h2>
-               {this.props.totalP * 15}
+               {this.props.totalP * 15} €
              </h2>: ''
              }
               {  this.props.totalP == 2 ?
              <h2>
-               {this.props.totalP * 20}
+               {this.props.totalP * 20} €
              </h2>: ''
              }
 {current  > 0?
