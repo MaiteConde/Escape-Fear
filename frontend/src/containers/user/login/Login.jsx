@@ -1,28 +1,18 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import './Login.scss'
-import { notification } from 'antd';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { login } from '../../../redux/actions/users';
 import { Link } from 'react-router-dom';
 
 
 export default function Login(props) {
-    const onFinish = user => {
-      login(user)
-    .then(res => {
-        notification.success({ message: 'Connected successfully', description: 'Welcome'})
-    // localStorage.setItem('authToken',res.data.token)
-    setTimeout(() => {
-        props.history.push('/profile')
-    }, 2000);
-})      
-.catch(err =>{
-    notification.error({ message: 'Failed connection', description: 'Incorrect User or Password'})
-    setTimeout(() => {
-        props.history.push('/profile');
-        console.error(err)})
-    }, 2000);}
+  const onFinish = user => {
+    login(user)
+  setTimeout(() => {
+      props.history.push('/profile')
+  }, 2000);
+}
       const onFinishFailed = errorInfo => {
         console.log('Failed:', errorInfo);
       };

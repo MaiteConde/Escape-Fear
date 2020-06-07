@@ -39,21 +39,21 @@ function App() {
         <Route path='/room/:id' component={Room} />
         <Route path='/EditRoom/:id' component={EditRoom} />
 
-
-          {/* <AdminControl>
+        <Logued>
             <Switch>
-            </Switch>
-          </AdminControl> */}
-
-        {/* <Logued>
-            <Switch> */}
+              
+          <AdminControl>
+            <Switch>
           <Route path='/admin' component={Admin} />
+            </Switch>
+          </AdminControl>
+
               <Route path="/profile" component={Profile} exact />
               <Route path='/steps/:id' component={ReserSteps} />
-            {/* </Switch>
-          </Logued> */}
-        <Route exact path='*' component={NotFound} />
+            </Switch>
+          </Logued>
 
+        <Route exact path='*' component={NotFound} />
       </Switch>
     </BrowserRouter>
     <Footer/>

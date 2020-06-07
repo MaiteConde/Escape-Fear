@@ -1,19 +1,23 @@
 
 import store from '../store';
 import axios from 'axios';
+import { notification } from 'antd';
+
 import { API_URL } from '../../api-config';
 
-export const login = async (user) => {
+export const login = async(user) => {
     try {
-        const res = await axios.post(API_URL + 'users/login', user);
+        const res = await axios.post(API_URL + 'users/login', user)
         store.dispatch({
             type: 'LOGIN',
-            user:res.data[0]
+            user: res.data
         })
-        localStorage.setItem('authToken', res.data[1]);
-    return res;
+        localStorage.setItem('authToken', res.data.token);
+        notification.success({ message: 'Connected successfully', description: 'Welcome' })
+            
     } catch (error) {
         console.error(error)
+        notification.error({ message: 'Failed connection', description: 'Incorrect User or Password' })
     }
 }
 
