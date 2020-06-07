@@ -7,11 +7,11 @@ h2 {
 
 .steps {
     min-height: 74vh;
-}
-
-a, area, button, [role='button'], input:not([type='range']), label, select, summary, textarea {
-   
-    color: black !important;
+    a, area, input:not([type='range']), label, select, summary, textarea {
+        touch-action: manipulation;
+        background-color: rgba(0, 0, 0, 0);
+        color: black !important;
+    }
 }
 
 .ant-steps-item-process .ant-steps-item-icon {

@@ -1,7 +1,7 @@
 @import './colors.scss';
 body, html {
   margin: 0;
- 
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Inter', sans-serif;
@@ -104,22 +104,25 @@ background-image: url(https://images.wallpaperscraft.com/image/forest_fog_trees_
 .ant-input-affix-wrapper ,a, area, button, [role='button'], input:not([type='range']), label, select, summary, textarea
 {
  border-radius: 5em !important;
+ color: whitesmoke !important;
 }
 
-
+a, area, button, [role='button'], input:not([type='range']), label, select, summary, textarea {
+  color: whitesmoke !important;
+}
 
 button {
   margin: 0.7em;
   width: 12em;
   border-radius: 1em;
- 
+
 }
 
 .primaryButton {
 background-color: $Solid;
 width: 12em;
 border-radius: 1em !important;
-border: black solid; 
+border: black solid;
 color: black !important;
 margin: 3em;
 
@@ -137,11 +140,11 @@ color: $Solid !important;
 
 
 ::-webkit-scrollbar {
-  border: $Dark solid; 
+  border: $Dark solid;
   // border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  border: $Dark solid; 
+  border: $Dark solid;
   border-radius: 10px;
   background-color: $otro;
 
@@ -149,7 +152,7 @@ color: $Solid !important;
 
 .ant-btn {
   border-color: $Solid !important;
-  
+
 }
 
 .ant-btn-dashed {
@@ -170,5 +173,5 @@ background-color: rgba(233, 233, 227, 0.274) !important;
     display: none !important;
   }
 
-  
+
 

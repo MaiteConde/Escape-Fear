@@ -1,23 +1,33 @@
 @import '../colors.scss';
 
 nav {
+    
     display: flex;
-    justify-content: flex-end;
-   align-items: center;
-   height: 6em;
+    justify-content: space-between;
+    align-items: center;
+    height: 10em;
     a {
         font-size: 1.2em;
         color: whitesmoke !important;
         padding: 4em;
     }
+   
+}
+
+.containHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     img {
-        width: 5em;
+        width: 15em;
+        margin: 3em 3em;
     }
 }
 
 .isActive {
     color: $Solid  !important;
-} 
+}
 
 
 @media (max-width: 600px) {
@@ -27,6 +37,9 @@ nav {
         justify-content: center;
         a{
             padding: 1em;
+        }
+        img {
+            display: none;
         }
     }
 }

@@ -4,22 +4,26 @@ import { connect } from 'react-redux';
 import 'antd/dist/antd.css';
 import { logout } from '../redux/actions/users'
 import './Header.scss'
+import logo from './logo.png'
+
 
 
 const Header = ({user}) =>  {
  
   return <nav>
     {!user?.id ?
-    <div> 
-      {/* <span> <img src="https://image.flaticon.com/icons/png/512/70/70712.png" alt=""/> <p>Escape Room</p></span> */}
-     
+    <div className="containHeader"> 
+    
+    <div><img src={logo} alt=""/></div>
+      <div>
     <NavLink to='/' activeClassName="isActive" exact>Home</NavLink>
      <NavLink to='/login' activeClassName="isActive" exact>Login</NavLink>
      <NavLink to='/register' activeClassName="isActive" exact>Register</NavLink>
+     </div>
      </div>:  
-     <div>
-      {/* <span> <img src="https://image.flaticon.com/icons/png/512/70/70712.png" alt=""/> Escape Room</span> */}
-
+     <div className="containHeader">
+<div><img src={logo} alt=""/></div>
+<div>
            <NavLink to='/' activeClassName="isActive" exact>Home</NavLink>
            <NavLink to='/profile' activeClassName="isActive" exact>Profile</NavLink>
            <NavLink to='' onClick={logout}>Logout</NavLink>
@@ -28,6 +32,7 @@ const Header = ({user}) =>  {
   <NavLink to='/admin' activeClassName="isActive" exact>Admin</NavLink>: ''
 
 }
+</div>
      </div>
      
     }

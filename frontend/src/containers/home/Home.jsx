@@ -48,6 +48,8 @@ const Home = ({rooms}) => {
        </div>
       </div>
       {/* <SimpleMap/> */}
+
+    
       </Fragment>
     )     
     }
