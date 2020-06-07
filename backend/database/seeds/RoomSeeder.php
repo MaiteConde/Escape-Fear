@@ -15,21 +15,11 @@ class RoomSeeder extends Seeder
     {
         DB::table('rooms')->insert([
             [
-                'name' => 'Project Ðelta',
+                'name' => 'MAD',
                 'time' => '60 min',
                 'history' => '
                 Things are not always what they seem; the first appearance deceives many; the intelligence of a few perceives what has been carefully hidden”.
                 Strange things are happening in the Sally Star King Hospital. The centre has been vacated for years, yet screams and noises can still be heard inside at night. Does your team have what it takes to investigate and expose the secrets inside? If you are looking for a narrative puzzle game with a psychological twist, this is your room. Be cautious and enter at your own risk.',
-                'persons' => '2-4',
-                'city' => 'Madrid',
-                'image_path' => 'https://wallpaperaccess.com/full/415840.jpg',
-                'category_id' => 1
-            ],
-            [
-                'name' => 'MAD',
-                'time' => '70 min',
-                'history' => 'That’s one small step for a man, one giant leap for mankind”.
-                In 2052, you have been recruited to join Rainbow Galactic’s team of astronauts under the Project Delta Agreement. Your mission is to fly onboard spaceship Venus and carry biological experiments on other terrestrial planets to achieve space colonisation through genetic engineering. Will you be able to revolutionise the entire human race or will the project’s dark secrets consume you first?',
                 'persons' => '2-4',
                 'city' => 'Madrid',
                 'image_path' => 'https://www.nypl.org/sites/default/files/mystery_88fc11f4a48be33b.jpg',
@@ -37,16 +27,33 @@ class RoomSeeder extends Seeder
             ],
 
             [
-                'name' => 'War on Horizon Alpha',
+                'name' => 'Primal fear',
                 'time' => '60 min',
-                'history' => 'The galaxy is in peril, trapped under the cyborg fist of the feared Alpha One faction. The imperial regime rules from the space-fortress codenamed Horizon Alpha, a terrifying superweapon with an impenetrable security system.
-                You are a plucky band of rebels - the best in the parsec - chosen to infiltrate the Horizon Alpha. In 60 minutes a massive rebel fleet will arrive through hyperspace and fire on the base, but you must manually deactivate the shields if this daring assault is to work.
-                Grab your laser-swords. Arm your blasters. Complete the mission and escape before the Horizon Alpha is reduced to atoms. Good luck, you are our only hope!',
+                'history' => 'You are an exalted group of scientists exploring new, uncharted territories across the globe in search of new flora and fauna.
+                Your most recent assignment is a newly discovered island on which there have been reported sightings of creatures the world has never seen before and as you travel closer, you feel the excitement in your stomach start to grow.
+                Your helicopter lands in a deep forest and you step out of your vehicle ready for your next adventure. What you don’t yet realise is that this may well be your last…',
                 'persons' => '2-4',
                 'city' => 'Barcelona',
-                'image_path' => 'https://images5.alphacoders.com/542/thumb-1920-542019.jpg',
+                'image_path' => 'https://i.pinimg.com/originals/44/2b/cd/442bcd708a7c5aa7419fbe843219928d.jpg',
                 'category_id' => 1
             ],
+            
+            [
+                'name' => 'Zoe',
+                'time' => '70 min',
+                'history' => 'There is one scene in your mind that is busily following you. It has initially appeared in your dreams, the
+                scene of an abandoned house, but it has started chasing you during the daytime. This house seems to
+                be calling for you, it attracts you with an unknown force...What’s wrong with it? Is there anyone living
+                there?Does he or she need help? You cannot survive it any longer, it’s driving you crazy...You start
+                surfing and accidently you find the needed location…You reach the place. You open the door
+                and...become trapped. You have only one hour to escape until your personality
+                starts to change.',
+                'persons' => '2-4',
+                'city' => 'Madrid',
+                'image_path' => 'https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+                'category_id' => 1
+            ],
+
             [
                 'name' => 'Butcher’s Lair',
                 'time' => '90 min',

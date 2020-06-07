@@ -29,6 +29,7 @@ class AssessmentController extends Controller
             
             $body['room_id'] = $id;
             $body['user_id'] = Auth::id();
+            
             $assessment = Assessment::create($body);
             return $assessment;
         } catch (\Exception $e) {

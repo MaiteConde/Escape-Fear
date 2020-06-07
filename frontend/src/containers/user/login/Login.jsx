@@ -27,7 +27,7 @@ export default function Login(props) {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-             <h1 >Login</h1>
+             <h2 >Login</h2>
           <Form.Item
             label="email"
             name="email"

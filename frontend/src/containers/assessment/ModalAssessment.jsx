@@ -29,17 +29,17 @@ class ModalAssessment extends React.Component {
   render() {
     return ( 
       <div>
-        <Button className="primaryButton"  type="primary" onClick={this.showModal}>
+        <Button className="primaryButton" type="primary" onClick={this.showModal}>
           Write an assessment
         </Button>
   
         <Modal
-          title="Basic Modal"
+          title="Assessment"
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
-         <CreateAssessment/>
+         <CreateAssessment/> 
 
         </Modal>
       </div>

@@ -9,6 +9,22 @@ h2 {
     min-height: 74vh;
 }
 
+a, area, button, [role='button'], input:not([type='range']), label, select, summary, textarea {
+   
+    color: black !important;
+}
+
+.ant-steps-item-process .ant-steps-item-icon {
+    background: $yellow;
+    border-color:$yellow ;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon {
+    border-color:$yellow ;
+    svg {
+color: $yellow;
+    }
+}
 
 @media (max-width: 600px) {
     .footer {

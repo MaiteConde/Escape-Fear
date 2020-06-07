@@ -14,9 +14,10 @@ class CategorySeeder extends Seeder
         {
             DB::table('categories')->insert([
                 [
-                    'name' => 'SciFi',
+                    'name' => 'Horror',
                     
                 ],
+              
                 [
                     'name' => 'Thirller',
                    

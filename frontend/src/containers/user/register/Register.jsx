@@ -60,7 +60,7 @@ const Register = (props) => {
   return (
     <div className="register">
     <Form className="form" {...formItemLayout} form={form} name="register" onFinish={onFinish}  scrollToFirstError>
-    <h1 >Register</h1>
+    <h2 >Register</h2>
       <Form.Item name="email" label="Email"
         rules={[
           {

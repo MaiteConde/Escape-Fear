@@ -34,7 +34,7 @@ class ModalPhoto extends React.Component {
         </Button>
   
         <Modal
-          title="Basic Modal"
+          title="Photo"
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}

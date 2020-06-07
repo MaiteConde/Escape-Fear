@@ -72,7 +72,7 @@ background-image: url(https://images.wallpaperscraft.com/image/forest_fog_trees_
   bottom: 15px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: rgb(161, 236, 241);
+  border-top-color: $yellow;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }
@@ -101,53 +101,11 @@ background-image: url(https://images.wallpaperscraft.com/image/forest_fog_trees_
   }
 }
 
-a, area, button, [role='button'], input:not([type='range']), label, select, summary, textarea {
- color: black !important;
+.ant-input-affix-wrapper ,a, area, button, [role='button'], input:not([type='range']), label, select, summary, textarea
+{
+ border-radius: 5em !important;
 }
 
-.anticon svg {
-  color: $Solid !important;
-}
-
-
-// .button {
-//   width: 15em;
-//   flex: 1 1 auto;
-//   margin: 1em;
-//   padding: 1.5em;
-//   border: 2px solid $Solid;
-//   border-radius: 0.5em;
-//   text-align: center;
-//   text-transform: uppercase;
-//   position: relative;
-//   overflow:hidden;
-//   transition: .3s;
-//   &:after {
-//     position: absolute;
-//     transition: .3s;
-//     content: '';
-//     width: 0;
-//     left: 50%;
-//     bottom: 0;
-//     height: 3px;
-//     background: $Solid;
-//   }
-//   &:nth-of-type(5):after {
-//       height: 120%;
-//       left: -10%;
-//       transform: skewX(15deg);
-//       z-index: -1;
-//     }
-//     &:hover {
-//       cursor: pointer;
-//       &:after {
-//         width: 100%;
-//         left: 0;
-//       }&:nth-of-type(5):after {
-//           left: -10%;
-//           width: 120%;
-//         }}
-//       }
 
 
 button {
@@ -164,8 +122,13 @@ border-radius: 1em !important;
 border: black solid; 
 color: black !important;
 margin: 3em;
-}
 
+}
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  color: #fff;
+  background: $yellow !important;
+  border-color: $yellow !important;
+}
 .secondButton {
   border-radius: 1em !important;
   background-color: rgba(0, 0, 0, 0) !important;
@@ -183,3 +146,29 @@ color: $Solid !important;
   background-color: $otro;
 
 }
+
+.ant-btn {
+  border-color: $Solid !important;
+  
+}
+
+.ant-btn-dashed {
+  border-color: $Solid !important;
+
+}
+
+.ant-modal-content {
+background-color: rgba(233, 233, 227, 0.274) !important;
+
+}
+
+.ant-modal-header  {
+  background-color: rgba(255, 255, 251, 0) !important;
+  }
+
+  .ant-modal-footer {
+    display: none !important;
+  }
+
+  
+

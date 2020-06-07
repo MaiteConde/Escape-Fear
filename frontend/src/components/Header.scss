@@ -1,3 +1,5 @@
+@import '../colors.scss';
+
 nav {
     display: flex;
     justify-content: flex-end;
@@ -14,8 +16,8 @@ nav {
 }
 
 .isActive {
-    color: pink;
-}
+    color: $Solid  !important;
+} 
 
 
 @media (max-width: 600px) {

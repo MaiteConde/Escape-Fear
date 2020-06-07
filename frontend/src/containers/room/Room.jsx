@@ -11,7 +11,7 @@ import { Button } from 'antd';
 import ModalAssessment from '../assessment/ModalAssessment'
 
 
-const Room = ({room}) => {
+const Room = ({room, user}) => {
     let location = useLocation();
     const id = useParams().id
     useEffect(() => {
@@ -25,6 +25,8 @@ if(room?.id != id ){  getRoomById(id); return <div id="preloader">
 
   </div>
 }
+const assessmentName= room?.assessment?.map((assessment => assessment?.user?.name))
+
     return (
       <Fragment>
 
@@ -82,14 +84,22 @@ if(room?.id != id ){  getRoomById(id); return <div id="preloader">
                     <p> <Moment format="YYYY/MM/DD">{assessment.createdAt}</Moment></p>
                     </div>
                 </div>
-   ) }))} 
+   ) }))}  
+{console.log(assessmentName)
+}
+   {
+     assessmentName.includes(user?.name)  ?
+<div></div>:
 <ModalAssessment />
+   
+  }
+
    </div>:''}
         </Fragment>
     )
 }
 
-const mapStateToProps = ({rooms}) =>({room:rooms?.roomId});
+const mapStateToProps = ({rooms, user}) =>({room:rooms?.roomId, user:user?.myUser});
 export default connect(mapStateToProps)  (Room);
 
 

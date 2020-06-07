@@ -37,7 +37,9 @@ const CreateAssessment = ({room, user, totalP, reserDate}) => {
           onChange={(index) => localStorage.setItem('index', `${index}`)}
          />
            
-                <Button>  <input  type="submit" /></Button>
+           <Button className="primaryButton" type="primary" htmlType="submit">
+              Write
+            </Button>
               
                   
                 </form>
