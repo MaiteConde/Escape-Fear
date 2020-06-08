@@ -16,6 +16,16 @@ const roomReducer = (state = {}, action) => {
                         ...state,
                         price: action.payload
                     }
+                    case 'ID':
+                        return {
+                            ...state,
+                            id: action.payload
+                        }
+                    case 'HOUR':
+                    return {
+                        ...state,
+                        hour: action.payload
+                    }
                     
                 case 'RESER_DATE':
                     return {

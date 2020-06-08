@@ -10,7 +10,7 @@ import {useHistory} from 'react-router-dom';
 
 
 
-const CreateReservation = ({room, user, totalP, reserDate}) => {
+const CreateReservation = ({room, user, totalP, reserDate, hour}) => {
     const history = useHistory();
     
 
@@ -34,7 +34,7 @@ const CreateReservation = ({room, user, totalP, reserDate}) => {
         const reservation = {
             persons: totalP,
             date: moment(reserDate).format('YYYY/MM/DD'),
-            hour: '15:00',
+            hour: `${hour}` ,
             user_id: user?.id,
             room_id: id,
             price: totalA(totalP) 
@@ -60,6 +60,6 @@ const CreateReservation = ({room, user, totalP, reserDate}) => {
     )
 }
 
-const mapStateToProps = ({rooms, user}) =>({room:rooms?.roomId, totalP:rooms?.price, reserDate:rooms?.date, user: user?.user});
+const mapStateToProps = ({rooms, user}) =>({room:rooms?.roomId, totalP:rooms?.price, reserDate:rooms?.date, hour:rooms?.hour ,user: user?.user});
 export default connect(mapStateToProps)  (CreateReservation);
 

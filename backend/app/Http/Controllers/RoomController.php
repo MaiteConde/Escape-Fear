@@ -10,14 +10,14 @@ class RoomController extends Controller
 {
     public function getAll()
     { 
-        $rooms = Room::with('category', 'assessment.user')->get();
+        $rooms = Room::with('category', 'assessment.user', 'reservations')->get();
         return $rooms;
     }
 
 
     public function getById($id) 
     { 
-        $room = Room::with('category', 'assessment.user')->find($id);
+        $room = Room::with('category', 'assessment.user', 'reservations')->find($id);
         return $room;
     }
     public function insert(Request $request)

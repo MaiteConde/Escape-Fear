@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react'
+import React, { useEffect, Fragment} from 'react'
 import { connect } from 'react-redux';
 import { getInfo} from '../../../redux/actions/users';
 import { NavLink } from 'react-router-dom';
@@ -32,11 +32,10 @@ const Myreservations = ({user}) => {
           
           </div>
       
-     console.log(user.reservations.length)
     return (
-
-        <div className="profile">
+<Fragment>
         <NavLink to='/profile' activeClassName="isActive" exact><ArrowLeftOutlined /></NavLink>
+        <div className="profile">
 
           
            {user?.reservations.map((reservation) =>
@@ -79,6 +78,7 @@ const Myreservations = ({user}) => {
                       
   
         </div> 
+        </Fragment>
     )
 }
 

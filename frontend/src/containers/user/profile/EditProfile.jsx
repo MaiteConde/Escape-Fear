@@ -1,8 +1,9 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import { notification } from 'antd';
-import { Form, Input, Button, Checkbox } from 'antd';
-import { Link } from 'react-router-dom';
+import { Form, Input, Button } from 'antd';
+import {NavLink } from 'react-router-dom'
+import {ArrowLeftOutlined } from '@ant-design/icons' 
 import './editProfile.scss'
 import { editProfile } from '../../../redux/actions/users';
 
@@ -26,7 +27,6 @@ export default function Edit(props) {
       };
     return (
         <div className="login">
-           
         <Form className="form"{...layout}  
           name="basic"
           initialValues={{
@@ -35,6 +35,8 @@ export default function Edit(props) {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
+        <NavLink to= '/profile'  activeClassName="isActive" exact><ArrowLeftOutlined /></NavLink>
+
              <h1 >Edit Profile</h1>
           <Form.Item
             label="email"

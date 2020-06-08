@@ -51,13 +51,14 @@ const Pag = ({users}) => {
           {item.name} <br/>
           {item.email}
           <br/>
-          <Button className="secondButton" type="dashed" onClick={()=>deleteUser(item.id)}>Ban</Button>
+          
        
           {
             item.deleted_at ?
-            <Button className="secondButton" type="dashed" onClick={()=>restoreUser(item.id)}>Restore</Button>: ''
+            <Button className="secondButton" type="dashed" onClick={()=>restoreUser(item.id)}>Restore</Button>: 
+            <Button className="secondButton" type="dashed" onClick={()=>deleteUser(item.id)}>Ban</Button>
           }
-
+ 
 
         <List.Item.Meta
           name={item.name}

@@ -19,6 +19,7 @@ import Admin from './containers/admin/Admin';
 import  EditRoom  from './containers/admin/EditRoom';
 import Myreservations from './containers/user/profile/Myreservations';
 import ResultsSearch from './containers/admin/ResultsSearch';
+import About from './components/About';
 
 
 
@@ -40,13 +41,15 @@ function App() {
         <Route path='/rooms' component={Rooms} />
         <Route path='/room/:id' component={Room} />
         <Route path='/EditRoom/:id' component={EditRoom} />
+        <Route path='/about' component={About} />
+
 
         <Logued>
             <Switch>
               
               <Route path="/profile" component={Profile} exact />
               <Route path="/reservations" component={Myreservations} exact />
-              <Route path='/steps/:id' component={ReserSteps} />
+              <Route path='/steps/:id' component={ReserSteps} exact/>
 
               <AdminControl>
             <Switch>

@@ -11,7 +11,7 @@ import Moment from 'react-moment';
 
 
 import Room from './Room';
-import { totalPrice } from '../../redux/actions/rooms';
+import { totalPrice, roomid } from '../../redux/actions/rooms';
 import  CreateReservation  from './CreateReservation';
 
 
@@ -54,11 +54,17 @@ function onChange(value) {
 totalPrice(value)
 }
 
+
 class ReserSteps extends React.Component {
-  
+  componentDidMount(){
+    const id = this.props.match.params.id
+    console.log(id)
+    roomid(id)
+
+  }
   constructor(props) {
-    super(props);
     
+    super(props);
     this.state = {
       current: 0,
       date: this.props.reserDate
@@ -114,9 +120,12 @@ class ReserSteps extends React.Component {
     
       <div>
 <h2>Date:</h2>
-<h2><Moment format="YYYY/MM/DD">{this.props?.reserDate}</Moment></h2></div>: ''}
+<h2><Moment format="YYYY/MM/DD">{this.props?.reserDate}</Moment></h2>
+<h2>Hour:</h2>
+<h2>{this.props?.hour}</h2> </div>: ''}
+
              
-      {console.log(steps.length)}
+    
         
         <div className="steps-action">
 
@@ -124,7 +133,7 @@ class ReserSteps extends React.Component {
   
           {current < steps.length - 1 && (
             <Button className="primaryButton" type="primary" onClick={() => this.next()}>
-            {console.log(steps.length)}
+           
               Next
             </Button>
           )}
@@ -148,5 +157,5 @@ class ReserSteps extends React.Component {
   }
 }
 
-const mapStateToProps = ({rooms}) =>({room:rooms?.roomId, totalP:rooms?.price, reserDate:rooms?.date});
+const mapStateToProps = ({rooms}) =>({room:rooms?.roomId, totalP:rooms?.price, reserDate:rooms?.date, hour:rooms?.hour});
 export default connect(mapStateToProps)  (ReserSteps);

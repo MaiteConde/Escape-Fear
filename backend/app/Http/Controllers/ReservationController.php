@@ -9,7 +9,7 @@ use App\Mail\ReservationShipped;
 use Illuminate\Support\Facades\Mail;
 
 
-
+ 
 class ReservationController extends Controller
 {
     public function getAll()

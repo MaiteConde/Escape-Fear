@@ -1,9 +1,11 @@
 import React from 'react';
 import 'antd/dist/antd.css';
+import { NavLink } from 'react-router-dom'
 import { notification } from 'antd';
-import { Form, Input, Button, Checkbox } from 'antd';
-import { Link } from 'react-router-dom';
+import { Form, Input, Button } from 'antd';
 import { editRoom } from '../../redux/actions/rooms';
+import {ArrowLeftOutlined } from '@ant-design/icons' 
+
 
 export default function Edit(props) {
     const id = props.match.params.id
@@ -27,7 +29,9 @@ export default function Edit(props) {
       };
     return (
         <div className="login">
-           
+                <NavLink to= '/admin'  activeClassName="isActive" exact>
+                  <ArrowLeftOutlined />
+                  </NavLink>
         <Form className="form"{...layout}  
           name="basic"
           initialValues={{

@@ -17,6 +17,7 @@ const Header = ({user}) =>  {
     <div><img src={logo} alt=""/></div>
       <div>
     <NavLink to='/' activeClassName="isActive" exact>Home</NavLink>
+    <NavLink to='/about' activeClassName="isActive" exact>About</NavLink>
      <NavLink to='/login' activeClassName="isActive" exact>Login</NavLink>
      <NavLink to='/register' activeClassName="isActive" exact>Register</NavLink>
      </div>
@@ -25,6 +26,7 @@ const Header = ({user}) =>  {
 <div><img src={logo} alt=""/></div>
 <div>
            <NavLink to='/' activeClassName="isActive" exact>Home</NavLink>
+           <NavLink to='/about' activeClassName="isActive" exact>About</NavLink>
            <NavLink to='/profile' activeClassName="isActive" exact>Profile</NavLink>
            <NavLink to='' onClick={logout}>Logout</NavLink>
 {

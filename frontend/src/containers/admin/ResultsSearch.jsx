@@ -30,6 +30,11 @@ import './ResultsSearch.scss'
     deleteUser(id)
     history.push('/admin') 
   }
+
+  const restoreUs = () => {
+    restoreUser(id)
+    history.push('/admin') 
+  }
       const listData = [];
       users.map((user => 
       listData.push({
@@ -42,7 +47,7 @@ import './ResultsSearch.scss'
         })
       )) 
     
-      return (
+      return ( 
           <div className="userPag">
              
              <NavLink to= '/admin'  activeClassName="isActive" exact>
@@ -73,11 +78,11 @@ import './ResultsSearch.scss'
 
             {console.log(item.id)}
             <br/>
-            <Button className="secondButton" type="dashed" onClick={deleteUs}>Ban</Button>
+           
          
             {
               item.deleted_at ?
-              <Button className="secondButton" type="dashed" onClick={()=>restoreUser(item.id)}>Restore</Button>: ''
+              <Button className="secondButton" type="dashed" onClick={restoreUs}>Restore</Button>:  <Button className="secondButton" type="dashed" onClick={deleteUs}>Ban</Button>
             }
   
   

@@ -1,0 +1,36 @@
+@import '../colors.scss';
+.game, .forMe, .why{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    img {
+        width: 35em;
+        
+    }
+    div{
+        width: 50%;
+        text-align: left;
+        padding: 2em;
+    }
+
+}
+.game, .why{
+    background-color: $otro;
+}
+
+@media (max-width: 600px) {
+    .game, .forMe, .why{
+        width: 100%;
+        img{
+            width: 20em;
+        }
+        div{
+            width: 100%;
+        }
+    }
+ 
+
+}
+

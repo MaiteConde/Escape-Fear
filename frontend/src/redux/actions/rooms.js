@@ -63,6 +63,25 @@ export const totalPrice = async (value) => {
     })
 
   };
+  export const roomid = async (id) => {
+    store.dispatch({
+        type: 'ID',
+        payload: id
+      
+    })
+
+  };
+
+  export const ReserHour = async (value) => {
+    store.dispatch({
+        type: 'HOUR',
+        payload: value
+      
+    })
+
+  };
+
+
 
   export const reservDate = async (selectedValue) => {
     store.dispatch({
