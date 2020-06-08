@@ -5,69 +5,91 @@ import { Button } from 'antd';
 import {ArrowLeftOutlined } from '@ant-design/icons' 
 import {useHistory} from 'react-router-dom'
 import './ResultsSearch.scss'
+import 'antd/dist/antd.css';
+import { List, Space } from 'antd';
+import { deleteUser, restoreUser, SearchUsers } from '../../redux/actions/users';
+import './ResultsSearch.scss'
 
 
-import { SearchUsers, deleteUser, restoreUser } from '../../redux/actions/users';
-import InSearch from './Search';
 
-const CatSearch = ({users}) => {
-    const history = useHistory();
-    let location = useLocation();
-    const search = location.pathname.replace('/usersearch/','')
-    useEffect(() => {
-        SearchUsers(search)
-    }, [])
+const IconText = ({ icon, text }) => (
     
-
-    if (users?.length <= 0) return <div className="notFound">
-    <h2>No results</h2></div> 
-    return (
-<Fragment>
-
-<NavLink to='/admin' activeClassName="isActive" exact><ArrowLeftOutlined /></NavLink>
-
-
-    <div className="usersContain">
-      
-    { 
-    users?.map(function(user) {
-       
-
-        const deleteUs = () => {
-            deleteUser(user?.id)
-            history.push('/admin') 
-          }
-         return ( 
-     <div  className="users">
-         <div className="userInfo">
-         <img src={`http://localhost:8000/images/profile/${user?.image_path}`} alt=""/>
-         <div className="userName">
-     <p>{user.name}</p>
-    <p>{user.email}</p>
-    </div>
-     </div>
-     <div className="mail">
-
-    </div>
-    
-    <Button className="secondButton" type="dashed" onClick={()=>deleteUs()}>Ban</Button>
-    {       
-             user.deleted_at ?
-            <Button className="secondButton" type="dashed" onClick={()=>restoreUser(user.id)}>Restore</Button>: ''
-          }
-    </div> 
+    <Space>
+      {React.createElement(icon)}
+      {text}
+    </Space> 
+  );
   
- 
- 
-  )
-
-            })
-        }
-           </div>
-
-</Fragment>
-)
-}
-
-const mapStateToProps = ({user}) =>({users:user?.userSearch});
-export default connect(mapStateToProps)  (CatSearch);
+  const Results = ({users}) => {
+  const history = useHistory();
+      let location = useLocation();
+      const search = location.pathname.replace('/usersearch/','')
+      useEffect(() => {
+         SearchUsers(search)
+       }, [])
+      const listData = [];
+      users.map((user => 
+      listData.push({
+     
+      name: user?.name,
+      email: user?.email,
+      id: user?.id,
+      deleted_at: user?.deleted_at
+          
+        })
+      )) 
+    
+      return (
+          <div className="userPag">
+             
+             <NavLink to= '/admin'  activeClassName="isActive" exact>
+                  <ArrowLeftOutlined />
+                  </NavLink>
+               
+  <List
+      itemLayout="vertical"
+      size="large"
+      pagination={{
+        onChange: page => {
+          console.log(page);
+        },
+        pageSize: 5,
+      }}
+      dataSource={listData}
+  
+      renderItem={item => (
+        <List.Item
+          key={item.name}
+          
+        
+        >
+           
+            {item.name} <br/>
+            {item.email}
+            <br/>
+            <Button className="secondButton" type="dashed" onClick={()=>deleteUser(item.id)}>Ban</Button>
+         
+            {
+              item.deleted_at ?
+              <Button className="secondButton" type="dashed" onClick={()=>restoreUser(item.id)}>Restore</Button>: ''
+            }
+  
+  
+          <List.Item.Meta
+            name={item.name}
+            email={item.email}
+            id={item.id}
+          />
+     
+        </List.Item>
+      )}
+    />
+    
+    </div>
+      )
+  }
+  
+  
+  const mapStateToProps = ({user}) =>({users:user?.userSearch});
+  export default connect(mapStateToProps)  (Results);
+   

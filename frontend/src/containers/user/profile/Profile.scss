@@ -20,7 +20,7 @@ height: 90%;
 }
 
 .ant-card-body {
-    padding: 0;
+    padding: 1em;
     // background-color: rgba(235, 229, 230, 0.116) !important;
 }
 
@@ -29,4 +29,15 @@ height: 90%;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+}
+
+@media (max-width: 600px) {
+.buttonsProf {
+    margin: 2em 0;
+}
+.profile{
+    h2{
+        padding: 0;
+    }
+}
 }

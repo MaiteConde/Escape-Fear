@@ -45,8 +45,7 @@ const steps = [
       {/* <h2>Reservation resume:</h2> */}
       <br/>
        <Room /> 
-      <h2>Date:</h2>
-      {/* <CreateReservation  /> */}
+     
   </Fragment>
   },
 ];
@@ -131,12 +130,17 @@ class ReserSteps extends React.Component {
           )}
           {current === steps.length - 1 && (
     
-            <CreateReservation />
+ 
+      <CreateReservation />
+   
           )}
           {current > 0 && (
+       
+           
             <Button className="secondButton" style={{ margin: '0 8px' }} onClick={() => this.prev()}>
               Previous
             </Button>
+           
           )}
         </div>
       </div>

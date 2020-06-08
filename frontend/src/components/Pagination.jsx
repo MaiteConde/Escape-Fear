@@ -29,7 +29,7 @@ const Pag = ({users}) => {
     )) 
   
     return (
-        <div>
+        <div className="userPag">
            
      
              

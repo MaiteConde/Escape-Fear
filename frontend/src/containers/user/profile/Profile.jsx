@@ -1,13 +1,11 @@
-import React, { useEffect, Fragment } from 'react'
+import React, { useEffect} from 'react'
 import { connect } from 'react-redux';
-import { getInfo, logout } from '../../../redux/actions/users';
+import { getInfo } from '../../../redux/actions/users';
 import { NavLink } from 'react-router-dom';
 import './Profile.scss'
 import {useHistory} from 'react-router-dom'
 import ModalPhoto from './Modal';
-import { DeleteFilled } from '@ant-design/icons';
-import { deleteReservation } from '../../../redux/actions/reservations';
-import { Popconfirm, message } from 'antd';
+import {message } from 'antd';
 import { Button } from 'antd';
 import { Card, Avatar } from 'antd';
 

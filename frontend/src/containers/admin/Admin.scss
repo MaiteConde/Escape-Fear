@@ -16,6 +16,7 @@
 .ant-pagination {
     display: flex;
     justify-content: center;
+    // flex-wrap: wrap;
 }
 
 .buttons {
@@ -33,8 +34,29 @@
 }
 
 @media (max-width: 600px) {
-    .ant-pagination {
-        width: 80%;
+    
+    .ant-list-items{
+        width: 50%;
+        li{
+            margin:0.5em !important;
+        }
     }
-}
+    .userPag {
+
+         width: 50%;
+     
+    }
+    .fullAdmin {
+        align-items: initial;
+    }
+    .ant-pagination-item{
+     
+        width: 2em !important;
+        height: 2em !important;
+        margin:0.1em !important;
+    }
+    .userPag {
+        width: 100%;
+    }
+} 
 
