@@ -114,12 +114,12 @@ export const editProfilePhoto = async (formData) => {
             }
           
                }
-               export const restoreUser = async (id) => {
-                try {
-                  await axios.get(API_URL + `users/restore/${id}`,{
-                        headers: {
-                            Authorization: 'Bearer '+ localStorage.getItem('authToken')
-                        }
+ export const restoreUser = async (id) => {
+ try {
+ await axios.get(API_URL + `users/restore/${id}`,{
+      headers: {
+       Authorization: 'Bearer '+ localStorage.getItem('authToken')
+    }
                     })  
                  getAllRooms()
                  getAllUsers()
@@ -132,7 +132,10 @@ export const editProfilePhoto = async (formData) => {
                    }
     
 
-
+export const contactUs = async (mail) => {
+ await axios.post(API_URL + 'contact-us', mail, {
+     }) 
+     } 
     
       export const clearData = () => {
         store.dispatch({

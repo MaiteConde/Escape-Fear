@@ -11,22 +11,25 @@ import { deleteUser, restoreUser, SearchUsers } from '../../redux/actions/users'
 import './ResultsSearch.scss'
 
 
-
-const IconText = ({ icon, text }) => (
-    
-    <Space>
-      {React.createElement(icon)}
-      {text}
-    </Space> 
-  );
   
   const Results = ({users}) => {
   const history = useHistory();
+  
       let location = useLocation();
       const search = location.pathname.replace('/usersearch/','')
       useEffect(() => {
          SearchUsers(search)
        }, [])
+       
+       if (!users) {return  <div id="preloader">
+       <div id="loader"></div>  </div>
+
+}
+       const id = users.map((user => user.id))
+  const deleteUs = () => {
+    deleteUser(id)
+    history.push('/admin') 
+  }
       const listData = [];
       users.map((user => 
       listData.push({
@@ -63,11 +66,14 @@ const IconText = ({ icon, text }) => (
           
         
         >
-           
+            
             {item.name} <br/>
             {item.email}
+            
+
+            {console.log(item.id)}
             <br/>
-            <Button className="secondButton" type="dashed" onClick={()=>deleteUser(item.id)}>Ban</Button>
+            <Button className="secondButton" type="dashed" onClick={deleteUs}>Ban</Button>
          
             {
               item.deleted_at ?

@@ -75,6 +75,7 @@ Route::prefix('v1')->group( function () {
     });
 
 
-
+    Route::get('contact-us', 'ContactUsController@contactUs');
+    Route::post('contact-us',['as'=>'contactus.store','uses'=>'ContactUsController@contactUsPost']);
     
 });

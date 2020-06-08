@@ -7,17 +7,14 @@ import { deleteUser, restoreUser } from '../redux/actions/users';
 
 
 
-const IconText = ({ icon, text }) => (
-    
-  <Space>
-    {React.createElement(icon)}
-    {text}
-  </Space>
-);
-
 const Pag = ({users}) => {
+  if (!users) {return  <div id="preloader">
+       <div id="loader"></div>  </div>
+
+}
     const listData = [];
     users.map((user => 
+      
     listData.push({
    
     name: user?.name,
@@ -25,10 +22,10 @@ const Pag = ({users}) => {
     id: user?.id,
     deleted_at: user?.deleted_at
         
-      })
-    )) 
+  })
+  )) 
   
-    return (
+  return (
         <div className="userPag">
            
      

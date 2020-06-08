@@ -6,12 +6,10 @@ import Carrousel from '../room/Carrousel';
 import Rooms from '../room/Rooms';
 import SimpleMap from '../../components/Map';
 import Contact from '../../components/Contact';
-import { getAllUsers } from '../../redux/actions/users';
 
 const Home = ({rooms}) => {
     useEffect(() => {
        getAllRooms()
-       getAllUsers()
     }, [])
     
     if(!rooms){
