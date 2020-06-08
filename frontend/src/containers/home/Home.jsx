@@ -56,7 +56,7 @@ const Home = ({rooms}) => {
       <h5>C/ Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
       </div>
       <div className="contactForm">
-      <h2>Contact us:</h2>
+     
         <Contact />
       </div>
       </div>

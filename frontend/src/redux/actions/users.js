@@ -114,6 +114,22 @@ export const editProfilePhoto = async (formData) => {
             }
           
                }
+               export const restoreUser = async (id) => {
+                try {
+                  await axios.get(API_URL + `users/restore/${id}`,{
+                        headers: {
+                            Authorization: 'Bearer '+ localStorage.getItem('authToken')
+                        }
+                    })  
+                 getAllRooms()
+                 getAllUsers()
+                } catch (error) {
+                    console.error(error)
+                    getAllRooms()
+                    getAllUsers()
+                }
+              
+                   }
     
 
 

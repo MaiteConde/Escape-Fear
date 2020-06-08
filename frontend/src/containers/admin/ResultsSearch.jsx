@@ -7,7 +7,7 @@ import {useHistory} from 'react-router-dom'
 import './ResultsSearch.scss'
 
 
-import { SearchUsers, deleteUser } from '../../redux/actions/users';
+import { SearchUsers, deleteUser, restoreUser } from '../../redux/actions/users';
 import InSearch from './Search';
 
 const CatSearch = ({users}) => {
@@ -15,7 +15,6 @@ const CatSearch = ({users}) => {
     let location = useLocation();
     const search = location.pathname.replace('/usersearch/','')
     useEffect(() => {
- 
         SearchUsers(search)
     }, [])
     
@@ -51,7 +50,11 @@ const CatSearch = ({users}) => {
 
     </div>
     
-    <Button className="secondButton" type="dashed" onClick={()=>deleteUs()}>Delete</Button>
+    <Button className="secondButton" type="dashed" onClick={()=>deleteUs()}>Ban</Button>
+    {       
+             user.deleted_at ?
+            <Button className="secondButton" type="dashed" onClick={()=>restoreUser(user.id)}>Restore</Button>: ''
+          }
     </div> 
   
  

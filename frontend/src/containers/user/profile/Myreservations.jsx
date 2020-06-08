@@ -7,6 +7,8 @@ import {useHistory} from 'react-router-dom'
 import { DeleteFilled } from '@ant-design/icons';
 import { deleteReservation } from '../../../redux/actions/reservations';
 import { Popconfirm, message } from 'antd';
+import {ArrowLeftOutlined } from '@ant-design/icons' 
+
 
 
 
@@ -24,6 +26,8 @@ const Myreservations = ({user}) => {
 
 
       if (user.reservations.length == 0)  return <div className ="empty">
+                <NavLink to='/profile' activeClassName="isActive" exact><ArrowLeftOutlined /></NavLink>
+
           <h2>YOU DON'T HAVE ANY RESERVATION YET</h2>
           
           </div>
@@ -32,14 +36,15 @@ const Myreservations = ({user}) => {
     return (
 
         <div className="profile">
-        
+        <NavLink to='/profile' activeClassName="isActive" exact><ArrowLeftOutlined /></NavLink>
+
           
            {user?.reservations.map((reservation) =>
            
            {
             const deleteRes = () => {
               deleteReservation(reservation?.id)
-              history.push('') 
+              history.push('/profile') 
             }
              return <div>
                <h2>Reservations:</h2>

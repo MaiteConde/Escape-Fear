@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
     <div className="formCon">
-    {/* <h2>Contact us:</h2> */}
+    <h2>Contact us:</h2>
     <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
       <Form.Item
         name={['user', 'name']}

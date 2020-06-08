@@ -12,7 +12,7 @@ function EditPhoto(props) {
     const handleSubmit = event => {
         event.preventDefault();
         const formData = new FormData();
-        console.log(event.target.img.files[0])
+       
      formData.set('img',event.target.img.files[0]);
         editProfilePhoto(formData)
       

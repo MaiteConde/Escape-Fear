@@ -3,7 +3,7 @@ import 'antd/dist/antd.css';
 import { connect } from 'react-redux';
 import { List, Space } from 'antd';
 import { Button } from 'antd';
-import { deleteUser } from '../redux/actions/users';
+import { deleteUser, restoreUser } from '../redux/actions/users';
 
 
 
@@ -22,7 +22,8 @@ const Pag = ({users}) => {
    
     name: user?.name,
     email: user?.email,
-    id: user?.id
+    id: user?.id,
+    deleted_at: user?.deleted_at
         
       })
     )) 
@@ -53,7 +54,14 @@ const Pag = ({users}) => {
           {item.name} <br/>
           {item.email}
           <br/>
-          <Button onClick={()=>deleteUser(item.id)}>Delete</Button>
+          <Button className="secondButton" type="dashed" onClick={()=>deleteUser(item.id)}>Ban</Button>
+       
+          {
+            item.deleted_at ?
+            <Button className="secondButton" type="dashed" onClick={()=>restoreUser(item.id)}>Restore</Button>: ''
+          }
+
+
         <List.Item.Meta
           name={item.name}
           email={item.email}

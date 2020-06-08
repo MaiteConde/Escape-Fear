@@ -13,13 +13,13 @@ class UserController extends Controller
 
     public function getAllUsers()
     { 
-       $users = User::with('assessments')->get();
+       $users = User::with('assessments')->withTrashed()->get();
         return $users;
     }
 
     public function searchUser($search)
     { 
-       $users = User::where('email', 'LIKE', "%$search%")->get();
+       $users = User::where('email', 'LIKE', "%$search%")->withTrashed()->get();
         return $users;
     }
 
@@ -122,14 +122,14 @@ class UserController extends Controller
             
             if ($users->isEmpty() || !$users[0]->trashed()) {
                 return response([
-                    'message' => 'Couldnt find the product'
+                    'message' => 'Couldnt find the user'
                 ], 400);
             }
             $user = $users[0];
             $user->restore();
             return response([
                 'message' => 'User recovered',
-                'product' => $user
+                'user' => $user
             ], 400);
         } catch (\Exception $e) {
             return response([
