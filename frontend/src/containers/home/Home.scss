@@ -104,9 +104,22 @@ color: black;
        margin: 3em 0;
    }
    .contactForm h2 {
-    width: 96%;
+    width: 200%;
+
 }
 h2{
     padding: 1.2em;
+}
+.formCon {
+  
+    width: 200%;
+}
+.homeInfo {
+    p{
+        display: none;
+    }
+    h2 {
+        margin: 0;
+    }
 }
 }

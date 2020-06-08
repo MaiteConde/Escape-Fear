@@ -27,3 +27,9 @@
     margin: 3em;
 }
 
+@media (max-width: 600px) {
+    .ant-pagination {
+        width: 80%;
+    }
+}
+

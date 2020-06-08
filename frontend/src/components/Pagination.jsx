@@ -50,7 +50,7 @@ const Pag = ({users}) => {
         
       
       >
-          <h2>Users:</h2>
+         
           {item.name} <br/>
           {item.email}
           <br/>

@@ -57,22 +57,7 @@ const Admin = ({rooms, users}) => {
   
 }
 </div>
-{/* <h2>Users:</h2>
-             {users?.map((user=> {
-               return (
-                 <div className="users">
-                  <p>
-                   Name: {user.name}
-                    </p> 
-                    <p>
-                      Mail: {user.email}
-                    </p>
-                    <Button onClick={() => deleteUser(user.id)}  className="secondButton" type="dashed">Delete</Button>
-
-
-                 </div>
-               )
-              }))} */}
+<h2>Users</h2>
              
           <Pag />
      
