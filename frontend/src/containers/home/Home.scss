@@ -6,7 +6,6 @@
     padding: 2em;
     justify-content: center;
    flex-wrap: wrap;
-  
 
 }
  
@@ -73,3 +72,41 @@ color: black;
     }
 }
 
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contactForm {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+ 
+}
+
+.map{
+    height: 70vh;
+    width: 50%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h5 {
+        color: whitesmoke;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+   .map {
+       width: 100%;
+       margin: 3em 0;
+   }
+   .contactForm h2 {
+    width: 96%;
+}
+h2{
+    padding: 1.2em;
+}
+}

@@ -25,7 +25,7 @@ if(room?.id != id ){  getRoomById(id); return <div id="preloader">
 
   </div>
 }
-const assessmentName= room?.assessment?.map((assessment => assessment?.user?.name))
+const assessmentName= room?.assessment?.map((assessment => assessment?.user?.email))
 
     return (
       <Fragment>
@@ -88,7 +88,7 @@ const assessmentName= room?.assessment?.map((assessment => assessment?.user?.nam
 {console.log(assessmentName)
 }
    {
-     assessmentName.includes(user?.name)  ?
+     assessmentName.includes(user?.email)  ?
 <div></div>:
 <ModalAssessment />
    

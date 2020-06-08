@@ -1,13 +1,16 @@
-.full {
-    min-height: 74vh;
+.fullAdmin {
     display: flex;
     flex-direction: column;
+    min-height: 74vh;
+    display: flex;
     align-items: center;
 }
 .rooms {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 .buttons {
@@ -15,9 +18,12 @@
 }
 
 .users {
+    display: flex;
+    flex-direction: column;
     background-color: rgba(240, 231, 231, 0.185);
-    text-align: left;
-    padding: 2em;
-    width: 50%;
+    align-items: flex-start;
+    padding: 1em;
     border-left: black solid 0.5em;
+    margin: 3em;
 }
+

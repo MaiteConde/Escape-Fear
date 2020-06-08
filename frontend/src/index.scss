@@ -109,6 +109,7 @@ background-image: url(https://images.wallpaperscraft.com/image/forest_fog_trees_
 
 a, area, button, [role='button'], input:not([type='range']), label, select, summary, textarea {
   color: whitesmoke !important;
+  border-color: $Solid;
 }
 
 button {
@@ -173,5 +174,22 @@ background-color: rgba(233, 233, 227, 0.274) !important;
     display: none !important;
   }
 
+  
+.ant-list * {
+ 
+  color: $Solid !important;
+}
 
+.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
+  display: inline !important;
+}
 
+.ant-pagination-item-active {
+  // font-weight: 500;
+  background: $yellow !important;
+  border-color: $yellow !important;
+}
+
+.ant-pagination-item {
+  margin: 1em;
+}

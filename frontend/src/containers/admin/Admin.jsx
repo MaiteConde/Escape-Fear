@@ -6,8 +6,8 @@ import { NavLink } from 'react-router-dom';
 import { Button } from 'antd';
 import './Admin.scss'
 import { Card } from 'antd';
+import Pag from '../../components/Pagination';
 
-// import '../containers/home/Home.scss'
 const { Meta } = Card;
 
 const Admin = ({rooms, users}) => {
@@ -16,6 +16,11 @@ const Admin = ({rooms, users}) => {
         getAllUsers()
      }, [])
      
+
+     function showTotal() {
+      return `Total ${users.length} items`;
+    }
+{console.log(users.length)}
      if(!rooms){
          return   <div id="preloader">
          <div id="loader"></div>
@@ -24,7 +29,7 @@ const Admin = ({rooms, users}) => {
      }
      return (
        
-       <div className="full">
+       <div className="fullAdmin">
        
               
        <h2>Rooms</h2>
@@ -52,7 +57,7 @@ const Admin = ({rooms, users}) => {
   
 }
 </div>
-<h2>Users:</h2>
+{/* <h2>Users:</h2>
              {users?.map((user=> {
                return (
                  <div className="users">
@@ -63,9 +68,14 @@ const Admin = ({rooms, users}) => {
                       Mail: {user.email}
                     </p>
                     <Button onClick={() => deleteUser(user.id)}  className="secondButton" type="dashed">Delete</Button>
+
+
                  </div>
                )
-             }))}
+              }))} */}
+             
+          <Pag />
+     
              </div>       
            
      )

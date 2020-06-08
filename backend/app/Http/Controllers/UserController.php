@@ -13,8 +13,8 @@ class UserController extends Controller
 
     public function getAllUsers()
     { 
-       $user = User::with('assessments')->get();
-        return $user;
+       $users = User::with('assessments')->get();
+        return $users;
     }
 
     public function register(Request $request)

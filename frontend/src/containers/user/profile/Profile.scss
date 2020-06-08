@@ -26,6 +26,7 @@ height: 90%;
 
 .buttonsProf {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }

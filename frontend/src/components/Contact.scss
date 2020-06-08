@@ -1,0 +1,14 @@
+@import '../colors.scss';
+
+.formCon {
+    padding: 3em;
+   
+}
+
+.ant-form-item .ant-mentions, .ant-form-item textarea.ant-input {
+    height: auto;
+    background-color: rgba(248, 244, 244, 0);
+    border-color: $Solid;
+    padding: 0;
+}
+

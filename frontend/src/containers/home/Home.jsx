@@ -1,13 +1,11 @@
 import React, { useEffect, Fragment } from 'react'
 import { getAllRooms } from '../../redux/actions/rooms'
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-
 import './Home.scss'
-import Menu from '../../components/Menu';
 import Carrousel from '../room/Carrousel';
 import Rooms from '../room/Rooms';
 import SimpleMap from '../../components/Map';
+import Contact from '../../components/Contact';
 
 const Home = ({rooms}) => {
     useEffect(() => {
@@ -50,7 +48,17 @@ const Home = ({rooms}) => {
       <p>Become part of the story, solving it from the inside</p>
        </div>
       </div>
-      {/* <SimpleMap/> */}
+      <div className="contact">
+      <div className="map">
+      <SimpleMap/>
+      <h5>C/ Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+      </div>
+      <div className="contactForm">
+      <h2>Contact us:</h2>
+        <Contact />
+      </div>
+      </div>
+     
 
     
       </Fragment>
