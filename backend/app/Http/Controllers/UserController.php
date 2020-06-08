@@ -17,6 +17,12 @@ class UserController extends Controller
         return $users;
     }
 
+    public function searchUser($search)
+    { 
+       $users = User::where('name', 'LIKE', "%$search%")->get();
+        return $users;
+    }
+
     public function register(Request $request)
     {
         $body = $request->all();

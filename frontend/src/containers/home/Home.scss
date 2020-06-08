@@ -26,11 +26,11 @@
 }
 
 .homeInfo{
-  
-
     h2 {
         text-align: center;
         margin: 2em;
+     
+
     }
     text-align: left;
     width: 50%;
@@ -75,6 +75,9 @@ color: black;
 .contact{
     display: flex;
     flex-wrap: wrap;
+    h2 {
+        margin-bottom: 1em;
+    }
 }
 .contactForm {
     width: 50%;
