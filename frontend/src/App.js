@@ -18,6 +18,7 @@ import AdminControl from './guards/AdminControl';
 import Admin from './containers/admin/Admin';
 import  EditRoom  from './containers/admin/EditRoom';
 import Myreservations from './containers/user/profile/Myreservations';
+import ResultsSearch from './containers/admin/ResultsSearch';
 
 
 
@@ -50,6 +51,7 @@ function App() {
               <AdminControl>
             <Switch>
           <Route path='/admin' component={Admin} />
+          <Route path='/usersearch/:search' component={ResultsSearch} />
             </Switch>
           </AdminControl>
 

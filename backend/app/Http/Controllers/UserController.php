@@ -19,7 +19,7 @@ class UserController extends Controller
 
     public function searchUser($search)
     { 
-       $users = User::where('name', 'LIKE', "%$search%")->get();
+       $users = User::where('email', 'LIKE', "%$search%")->get();
         return $users;
     }
 

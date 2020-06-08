@@ -1,0 +1,33 @@
+ .notFound {
+    min-height: 67vh;
+
+    background-image: url(https://cdn140.picsart.com/254765283018212.png?type=webp&to=min&r=640);
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+.usersContain {
+    min-height: 61vh;
+    img {
+        width: 7em;
+        height: 7em;
+        border-radius: 50%;
+        margin: 3em;
+    }
+    .userInfo {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        p {
+            padding: 2em;
+        }
+    }
+    .userName {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        p {
+            padding: 0;
+        }
+    }
+
+}

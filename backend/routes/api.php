@@ -9,7 +9,7 @@ Route::prefix('v1')->group( function () {
     Route::prefix('users')->group(function () {
         Route::post('/register', 'UserController@register');
         Route::post('/login', 'UserController@login');
-        Route::get('/{search}', 'UserController@searchUser');
+        Route::get('/search/{search}', 'UserController@searchUser');
 
 
         Route::middleware(['auth:api','checkRole:admin'])->group(function ()

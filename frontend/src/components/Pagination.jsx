@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import { connect } from 'react-redux';
-import { List, Avatar, Space } from 'antd';
+import { List, Space } from 'antd';
 import { Button } from 'antd';
 import { deleteUser } from '../redux/actions/users';
 

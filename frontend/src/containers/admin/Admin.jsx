@@ -7,6 +7,7 @@ import { Button } from 'antd';
 import './Admin.scss'
 import { Card } from 'antd';
 import Pag from '../../components/Pagination';
+import InSearch from './Search';
 
 const { Meta } = Card;
 
@@ -20,7 +21,7 @@ const Admin = ({rooms, users}) => {
      function showTotal() {
       return `Total ${users.length} items`;
     }
-{console.log(users.length)}
+
      if(!rooms){
          return   <div id="preloader">
          <div id="loader"></div>
@@ -60,7 +61,7 @@ const Admin = ({rooms, users}) => {
 <h2>Users</h2>
              
           <Pag />
-     
+     <InSearch />
              </div>       
            
      )

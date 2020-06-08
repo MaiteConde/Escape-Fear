@@ -11,6 +11,11 @@ const userReducer = (state = {}, action) => {
                     ...state,
                     users: action.payload
                 }
+                case 'SEARCH_USERS':
+                return {
+                    ...state,
+                    userSearch: action.payload
+                }
             case 'GET_INFO':
                 return {
                     ...state,

@@ -4,6 +4,7 @@
     min-height: 74vh;
     display: flex;
     align-items: center;
+    margin: 3em;
 }
 .rooms {
     width: 100%;
@@ -11,6 +12,10 @@
     justify-content: center;
     flex-wrap: wrap;
 
+}
+.ant-pagination {
+    display: flex;
+    justify-content: center;
 }
 
 .buttons {

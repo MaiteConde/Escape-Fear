@@ -65,6 +65,19 @@ export const getAllUsers = async () => {
 return res;
 }
 
+export const SearchUsers = async (search) => {
+    const res = await axios.get(API_URL + `users/search/${search}`, {
+        headers: {
+            Authorization: 'Bearer ' + localStorage.getItem('authToken')
+        }
+    }) 
+    store.dispatch({
+        type: 'SEARCH_USERS',
+        payload:res.data
+    })
+return res;
+}
+
 
 export const editProfile = async (user) => {
     await axios.put(API_URL + 'users/update', user, {

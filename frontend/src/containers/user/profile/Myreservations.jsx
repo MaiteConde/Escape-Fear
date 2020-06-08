@@ -38,8 +38,8 @@ const Myreservations = ({user}) => {
            
            {
             const deleteRes = () => {
-              deleteReservation(reservation?.id, user?.id)
-              history.push('')
+              deleteReservation(reservation?.id)
+              history.push('') 
             }
              return <div>
                <h2>Reservations:</h2>
