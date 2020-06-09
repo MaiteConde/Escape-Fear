@@ -11,7 +11,7 @@ export default function Edit(props) {
     const id = props.match.params.id
 
     const onFinish = (room) => {
-      editRoom(room, id) 
+      editRoom(room, id)  
     .then(res => {
         notification.success({ message: 'Edited successfully', description: 'Nice!'})
     setTimeout(() => {

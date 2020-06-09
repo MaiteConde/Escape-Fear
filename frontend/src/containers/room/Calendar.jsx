@@ -50,17 +50,20 @@ class ReservationCalendar extends React.Component {
     return (
       <div className="containerDate">
   
- <Calendar fullscreen={false} value={value} onSelect={this.onSelect} onPanelChange={this.onPanelChange}
+      <Calendar fullscreen={false} value={value} onSelect={this.onSelect} onPanelChange={this.onPanelChange}
        disabledDate={ current => {
+      
        if (roomsId?.includes(+ id)) {
 
         let index = dates?.findIndex(date => date === moment(current).format('YYYY-MM-DD'))
-        return index !== -1 && true    
+        return  index !== -1 && true  || current && current.valueOf() < Date.now();
+        
        }
-     
+    
+       }
+       }
 
-       }
-       }
+       
       />
 
     <Hour />
