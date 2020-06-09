@@ -35,7 +35,7 @@ const Rooms = ({rooms}) => {
                   cover={<img alt="example" src={room?.image_path} />}
                 >
                   <Meta title={room?.name}  />
-                  <span>  {room?.persons} players / {room?.category.name} / {room?.time} </span>    
+                  <span>  {room?.persons} players / {room?.category?.name} / {room?.time} </span>    
                   <div className="buttons">
                   <NavLink to= {`/room/${room?.id}`} activeClassName="isActive" exact>
                   <Button  className="secondButton" type="dashed">More info</Button></NavLink> 

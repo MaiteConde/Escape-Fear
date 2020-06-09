@@ -3,11 +3,10 @@ import 'antd/dist/antd.css';
 import { Calendar} from 'antd';
 import moment from 'moment';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom'
 
 import {getAllReservations} from '../../redux/actions/reservations'
 
-import {reservDate, getRoomById} from '../../redux/actions/rooms'
+import {reservDate} from '../../redux/actions/rooms'
 import Hour from './Hour';
 
 
@@ -49,11 +48,11 @@ class ReservationCalendar extends React.Component {
 
 
     return (
-      <div>
+      <div className="containerDate">
   
- <Calendar value={value} onSelect={this.onSelect} onPanelChange={this.onPanelChange}
+ <Calendar fullscreen={false} value={value} onSelect={this.onSelect} onPanelChange={this.onPanelChange}
        disabledDate={ current => {
-       if (roomsId.includes(+ id)) {
+       if (roomsId?.includes(+ id)) {
 
         let index = dates?.findIndex(date => date === moment(current).format('YYYY-MM-DD'))
         return index !== -1 && true    

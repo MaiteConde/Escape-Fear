@@ -1,6 +1,6 @@
 let backendHost;
 if(process.env.NODE_ENV==="production"){
-    backendHost='https://social-media-api2.herokuapp.com/'
+    backendHost='https://escape-fear-api.herokuapp.com/api/v1'
 }else{
     backendHost='http://localhost:8000/api/v1'
 }

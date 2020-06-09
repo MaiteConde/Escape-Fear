@@ -19,7 +19,7 @@ class CategorySeeder extends Seeder
                 ],
               
                 [
-                    'name' => 'Thirller',
+                    'name' => 'Thriller',
                    
                 ]
             ]);

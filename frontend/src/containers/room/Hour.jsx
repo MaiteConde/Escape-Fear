@@ -53,7 +53,7 @@ const Hour = () => {
     
     return(
          <>
-    <Select defaultValue="17:00" style={{ width: 120 }} onChange={handleChange}>
+    <Select defaultValue="hour" style={{ width: 120 }} onChange={handleChange}>
 
       <Option value="10:00">10:00</Option>
       <Option value="13:00">13:00</Option>

@@ -26,17 +26,82 @@ color: $yellow;
     }
 }
 
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner, .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+    color: #fff;
+    background: rgb(209, 212, 209);
+}
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before{
+    border: 1px solid rgba(2, 22, 2, 0.39);
+}
+.ant-picker-calendar .ant-picker-panel .ant-picker-body {
+    width: 40em;
+    border-radius: 1em;
+}
+
+.ant-picker-body {
+    background-color: rgb(199, 211, 199) !important; 
+
+  }
+  
+  .ant-picker-calendar .ant-picker-panel {
+      border-radius: 1em;
+  }
+  .ant-picker-calendar {
+    background-color: rgba(2, 8, 2, 0.493) !important; 
+    display: flex;
+      flex-direction: column;
+      align-items: center !important;
+      height: 26em !important;
+      width: 100%;
+    margin: 1em 0  !important;
+  }
+  .ant-picker-calendar .ant-picker-panel {
+      border-top: rgba(255, 192, 203, 0);
+  }
+  
+  .ant-picker-calendar-header .ant-picker-calendar-year-select {
+    display: none !important;
+  
+  }
+  
+  .ant-radio-button-wrapper:last-child {
+    display: none !important;
+  
+  }
+  .ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
+    display: none !important;
+  }
+
+  .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      background-color: rgba(0, 0, 0, 0);
+      color: whitesmoke;
+      border-radius: 0.5em;
+  }
+
+  .ant-select-arrow {
+      color: whitesmoke;
+  }
+
 @media (max-width: 600px) {
     .footer {
         display: none !important;
     }
-    .roomInfo{
-        display: none !important;
-    }
-    .room{
+    .steps {
+        .roomInfo{
+            display: none!important ;
+        }
+        .room{
     
-        img {
-            display: none !important;
+            img {
+                display: none !important;
+            }
         }
     }
+    h2 {
+        padding: 0;
+    }
+  
+    .ant-picker-calendar .ant-picker-panel .ant-picker-body {
+width: 26em; 
+}
 }

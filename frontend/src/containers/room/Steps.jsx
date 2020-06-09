@@ -118,7 +118,7 @@ class ReserSteps extends React.Component {
              }
 {current  > 0?
     
-      <div>
+      <div className="containerDate">
 <h2>Date:</h2>
 <h2><Moment format="YYYY/MM/DD">{this.props?.reserDate}</Moment></h2>
 <h2>Hour:</h2>

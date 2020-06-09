@@ -58,8 +58,7 @@ class RoomSeeder extends Seeder
                 'name' => 'Butcher’s Lair',
                 'time' => '90 min',
                 'history' => 'Dr Vladimir Knifesblade: university professor by day, serial killer by night. He is an educated man - he knows his classical music, his literature, and which bits of the human body taste best. The FBI have nicknamed him The Butcher.
-                A simple dinner party invitation to you - some of his favourite students - fails to mention that you are the main ingredient on the menu tonight. You have become The Butchers latest victims, or at least you will be if you dont escape from his bloody basement lair.
-                You have 60 minutes before the doctor begins cooking. Only the brightest brains survive... the rest get eaten with some fava beans and a nice Chianti. So be smart and dont be lasagne.',
+                A simple dinner party invitation to you - some of his favourite students - fails to mention that you are the main ingredient on the menu tonight. You have become The Butchers latest victims, or at least you will be if you dont escape from his bloody basement lair.',
                 'persons' => '2-4',
                 'city' => 'Barcelona',
                 'image_path' => 'https://writinggoals.com/sites/default/files/field/image/suspense-conspiracy-thriller.jpeg',
