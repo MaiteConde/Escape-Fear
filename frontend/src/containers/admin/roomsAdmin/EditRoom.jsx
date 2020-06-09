@@ -3,7 +3,7 @@ import 'antd/dist/antd.css';
 import { NavLink } from 'react-router-dom'
 import { notification } from 'antd';
 import { Form, Input, Button } from 'antd';
-import { editRoom, roomid } from '../../redux/actions/rooms';
+import { editRoom, roomid } from '../../../redux/actions/rooms';
 import {ArrowLeftOutlined } from '@ant-design/icons' 
 import ModalRoom from './ModalRoom';
 

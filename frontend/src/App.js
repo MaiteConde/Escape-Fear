@@ -16,12 +16,12 @@ import Footer from './components/Footer';
 import Logued from './guards/Logued';
 import AdminControl from './guards/AdminControl';
 import Admin from './containers/admin/Admin';
-import  EditRoom  from './containers/admin/EditRoom';
+import  EditRoom  from './containers/admin/roomsAdmin/EditRoom';
 import Myreservations from './containers/user/profile/Myreservations';
 import ResultsSearch from './containers/admin/search/ResultsSearch';
 import About from './components/About';
-import CreateRoom from './containers/admin/search/CreateRoom';
-import EditPhotoRoom from './containers/admin/EditPhotoRoom';
+import CreateRoom from './containers/admin/roomsAdmin/CreateRoom';
+import EditPhotoRoom from './containers/admin/roomsAdmin/EditPhotoRoom';
 
 
 

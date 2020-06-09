@@ -1,7 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import {useHistory} from 'react-router-dom';
-import { editRoomPhoto } from '../../redux/actions/rooms';
+import { editRoomPhoto } from '../../../redux/actions/rooms';
 import {Button} from 'antd';
 import { connect } from 'react-redux';
 import { notification } from 'antd';

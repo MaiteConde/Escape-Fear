@@ -10,7 +10,6 @@ import './CreateRoom.scss'
 
 
 
-
 function CreateRoom(props) {
   const [category_id, setCategory_id] = useState("")
   const { Option } = Select;
