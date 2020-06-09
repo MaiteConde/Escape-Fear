@@ -4,9 +4,9 @@ import { Calendar} from 'antd';
 import moment from 'moment';
 import { connect } from 'react-redux';
 
-import {getAllReservations} from '../../redux/actions/reservations'
+import {getAllReservations} from '../../../redux/actions/reservations'
 
-import {reservDate} from '../../redux/actions/rooms'
+import {reservDate} from '../../../redux/actions/rooms'
 import Hour from './Hour';
 
 
@@ -57,8 +57,9 @@ class ReservationCalendar extends React.Component {
 
         let index = dates?.findIndex(date => date === moment(current).format('YYYY-MM-DD'))
         return  index !== -1 && true  || current && current.valueOf() < Date.now();
-        
-       }
+         
+      }
+      return current && current.valueOf() < Date.now();
     
        }
        }

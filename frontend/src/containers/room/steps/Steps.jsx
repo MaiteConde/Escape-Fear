@@ -3,15 +3,15 @@ import 'antd/dist/antd.css';
 import { connect } from 'react-redux';
 import { Steps, Button, message } from 'antd';
 import './Steps.scss'
-import ReservationCalendar from './Calendar'
+import ReservationCalendar from '../calendar/Calendar'
 import { InputNumber } from 'antd';
 import Moment from 'react-moment';
 
 
 
 
-import Room from './Room';
-import { totalPrice, roomid } from '../../redux/actions/rooms';
+import Room from '../Room';
+import { totalPrice, roomid } from '../../../redux/actions/rooms';
 import  CreateReservation  from './CreateReservation';
 
 
@@ -86,7 +86,6 @@ class ReserSteps extends React.Component {
   
     const { current } = this.state; 
 
-  
     return (
       <div className="steps">
        
@@ -145,7 +144,7 @@ class ReserSteps extends React.Component {
           )}
           {current > 0 && (
        
-           
+            
             <Button className="secondButton" style={{ margin: '0 8px' }} onClick={() => this.prev()}>
               Previous
             </Button>

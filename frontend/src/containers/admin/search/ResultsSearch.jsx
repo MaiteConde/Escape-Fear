@@ -7,7 +7,7 @@ import {useHistory} from 'react-router-dom'
 import './ResultsSearch.scss'
 import 'antd/dist/antd.css';
 import { List, Space } from 'antd';
-import { deleteUser, restoreUser, SearchUsers } from '../../redux/actions/users';
+import { deleteUser, restoreUser, SearchUsers } from '../../../redux/actions/users';
 import './ResultsSearch.scss'
 
 

@@ -1,4 +1,4 @@
-@import '../../colors.scss';
+@import '../../../colors.scss';
 
 h2 {
     font-family: 'Megrim', cursive;  
@@ -11,6 +11,12 @@ h2 {
         touch-action: manipulation;
         background-color: rgba(0, 0, 0, 0);
         color: black !important;
+    }
+    
+}
+.steps-content {
+    img {
+        height: 50vh !important;
     }
 }
 
@@ -76,6 +82,19 @@ color: $yellow;
   }
 
   .ant-select-arrow {
+      color: whitesmoke;
+  }
+
+  .ant-steps-horizontal:not(.ant-steps-label-vertical) .ant-steps-item:last-child .ant-steps-item-title {
+      color:whitesmoke
+  }
+  .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title{
+      color:whitesmoke
+  }
+  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+      color: whitesmoke;
+  }
+  .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
       color: whitesmoke;
   }
 

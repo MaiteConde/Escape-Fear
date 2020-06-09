@@ -1,7 +1,7 @@
 import React, { useEffect, Fragment } from 'react'
 import 'antd/dist/antd.css';
 import { Carousel } from 'antd';
-import { getAllRooms } from '../../redux/actions/rooms';
+import { getAllRooms } from '../../../redux/actions/rooms';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { Button } from 'antd';

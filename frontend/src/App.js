@@ -5,7 +5,7 @@ import Register from './containers/user/register/Register';
 import Login from './containers/user/login/Login';
 import Header from './components/Header'
 import Home from './containers/home/Home'
-import ReserSteps from './containers/room/Steps';
+import ReserSteps from './containers/room/steps/Steps';
 import Rooms  from './containers/room/Rooms';
 import Room from './containers/room/Room';
 import { NotFound } from './components/NotFound';
@@ -18,7 +18,7 @@ import AdminControl from './guards/AdminControl';
 import Admin from './containers/admin/Admin';
 import  EditRoom  from './containers/admin/EditRoom';
 import Myreservations from './containers/user/profile/Myreservations';
-import ResultsSearch from './containers/admin/ResultsSearch';
+import ResultsSearch from './containers/admin/search/ResultsSearch';
 import About from './components/About';
 
 

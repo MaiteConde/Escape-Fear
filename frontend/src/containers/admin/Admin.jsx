@@ -7,7 +7,7 @@ import { Button } from 'antd';
 import './Admin.scss'
 import { Card } from 'antd';
 import Pag from '../../components/Pagination';
-import InSearch from './Search';
+import InSearch from './search/Search';
 
 const { Meta } = Card;
 

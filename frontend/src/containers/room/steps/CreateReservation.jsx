@@ -1,5 +1,5 @@
 import React from 'react'
-import { createReservation } from '../../redux/actions/reservations';
+import { createReservation } from '../../../redux/actions/reservations';
 import { connect } from 'react-redux';
 import { useLocation, useParams } from 'react-router-dom'
 import { Button, notification } from 'antd';
@@ -51,7 +51,9 @@ const CreateReservation = ({room, user, totalP, reserDate, hour}) => {
            
         })
     }
-    return (
+ 
+    return ( 
+        
         <Button className="primaryButton"  type="dashed" onClick={handleSubmit}>
         Reserve
       </Button>
