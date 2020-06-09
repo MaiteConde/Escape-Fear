@@ -50,6 +50,7 @@ Route::prefix('v1')->group( function () {
         Route::post('/', 'RoomController@insert');
         Route::put('/{id}', 'RoomController@update');
         Route::delete('/{id}', 'RoomController@delete');
+        Route::post('/image/{id}','RoomController@uploadImage'); 
 
         });
 

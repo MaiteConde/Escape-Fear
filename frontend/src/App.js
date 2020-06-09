@@ -20,6 +20,8 @@ import  EditRoom  from './containers/admin/EditRoom';
 import Myreservations from './containers/user/profile/Myreservations';
 import ResultsSearch from './containers/admin/search/ResultsSearch';
 import About from './components/About';
+import CreateRoom from './containers/admin/search/CreateRoom';
+import EditPhotoRoom from './containers/admin/EditPhotoRoom';
 
 
 
@@ -55,6 +57,10 @@ function App() {
             <Switch>
           <Route path='/admin' component={Admin} />
           <Route path='/usersearch/:search' component={ResultsSearch} />
+          <Route path='/createroom' component={CreateRoom} />
+          <Route path='/editphotoroom/:id' component={EditPhotoRoom} />
+
+
             </Switch>
           </AdminControl>
 

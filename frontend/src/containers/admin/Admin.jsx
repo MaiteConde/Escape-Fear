@@ -33,14 +33,14 @@ const Admin = ({rooms, users}) => {
        <div className="fullAdmin">
        
               
-       <h2>Rooms</h2>
+       <h2>Rooms (<NavLink to= {'/createroom'} activeClassName="isActive" exact>Create room</NavLink>)</h2>
        <div className="rooms">
             { rooms?.map(room => {
                 return (
-                  <Card
+                  <Card 
                   
                   style={{ width: 240 }}
-                  cover={<img alt="example" src={room?.image_path} />}
+                  cover={<img alt="example" src={`http://localhost:8000/images/rooms/${room?.image_path}`}/>}
                 >
                   <Meta title={room?.name}  />
                   <span>  {room?.persons} players / {room?.category.name} / {room?.time} </span>    

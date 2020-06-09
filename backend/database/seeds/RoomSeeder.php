@@ -22,7 +22,7 @@ class RoomSeeder extends Seeder
                 Strange things are happening in the Sally Star King Hospital. The centre has been vacated for years, yet screams and noises can still be heard inside at night. Does your team have what it takes to investigate and expose the secrets inside? If you are looking for a narrative puzzle game with a psychological twist, this is your room. Be cautious and enter at your own risk.',
                 'persons' => '2-4',
                 'city' => 'Madrid',
-                'image_path' => 'https://www.nypl.org/sites/default/files/mystery_88fc11f4a48be33b.jpg',
+                'image_path' => 'room1.jpg',
                 'category_id' => 2
             ],
 
@@ -34,7 +34,7 @@ class RoomSeeder extends Seeder
                 Your helicopter lands in a deep forest and you step out of your vehicle ready for your next adventure. What you don’t yet realise is that this may well be your last…',
                 'persons' => '2-4',
                 'city' => 'Barcelona',
-                'image_path' => 'https://i.pinimg.com/originals/44/2b/cd/442bcd708a7c5aa7419fbe843219928d.jpg',
+                'image_path' => 'room2.jpg',
                 'category_id' => 1
             ],
             
@@ -50,7 +50,7 @@ class RoomSeeder extends Seeder
                 starts to change.',
                 'persons' => '2-4',
                 'city' => 'Madrid',
-                'image_path' => 'https://images.unsplash.com/photo-1494376877685-d3d2559d4f82?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+                'image_path' => 'room3.jpg',
                 'category_id' => 1
             ],
 
@@ -61,7 +61,7 @@ class RoomSeeder extends Seeder
                 A simple dinner party invitation to you - some of his favourite students - fails to mention that you are the main ingredient on the menu tonight. You have become The Butchers latest victims, or at least you will be if you dont escape from his bloody basement lair.',
                 'persons' => '2-4',
                 'city' => 'Barcelona',
-                'image_path' => 'https://writinggoals.com/sites/default/files/field/image/suspense-conspiracy-thriller.jpeg',
+                'image_path' => 'room4.jpeg',
                 'category_id' => 2
             ]
         ]);

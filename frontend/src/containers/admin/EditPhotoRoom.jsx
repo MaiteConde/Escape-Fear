@@ -1,26 +1,25 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import {useHistory} from 'react-router-dom';
-import { editProfilePhoto } from '../../../redux/actions/users';
+import { editRoomPhoto } from '../../redux/actions/rooms';
 import {Button} from 'antd';
+import { connect } from 'react-redux';
 import { notification } from 'antd';
 
 
 
-function EditPhoto(props) {
+function EditPhotoRoom({id}) {
+console.log(id)
     const history = useHistory();
     const handleSubmit = event => {
         event.preventDefault();
         const formData = new FormData();
         
      formData.set('img',event.target.img.files[0]);
-        editProfilePhoto(formData)
+     editRoomPhoto(formData, id)
       
         .then(res => { 
-            notification.success({message:'Edited'})
-            setTimeout(() => {
-                history.push('/profile')
-            }, 2000);
+          
         })
         .catch((error)=>{
             console.error(error)
@@ -39,6 +38,6 @@ function EditPhoto(props) {
         </div>
     )
 }
-
-export default EditPhoto
+const mapStateToProps = ({rooms}) =>({id:rooms?.id});
+export default connect(mapStateToProps)  (EditPhotoRoom);
 

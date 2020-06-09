@@ -41,6 +41,27 @@ export const editRoom = async (room, id) => {
    
       }
 
+      export const postRoom = async (formData) => {
+        await axios.post(API_URL + 'rooms',formData, {
+              headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('authToken')
+              } 
+          }) 
+      
+       
+          }
+
+          export const editRoomPhoto = async (formData, id) => {
+             
+            await axios.post(API_URL +`rooms/image/${id}`, formData, {
+                  headers: {
+                    Authorization: 'Bearer ' + localStorage.getItem('authToken')
+                  }
+              }) 
+        
+           
+              }
+
       export const deleteRoom = async (id) => {
         try {
           await axios.delete(API_URL + `rooms/${id}`,{

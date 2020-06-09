@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import 'antd/dist/antd.css';
 import { NavLink } from 'react-router-dom'
 import { notification } from 'antd';
 import { Form, Input, Button } from 'antd';
-import { editRoom } from '../../redux/actions/rooms';
+import { editRoom, roomid } from '../../redux/actions/rooms';
 import {ArrowLeftOutlined } from '@ant-design/icons' 
+import ModalRoom from './ModalRoom';
+
 
 
 export default function Edit(props) {
     const id = props.match.params.id
-
+    roomid(id)
     const onFinish = (room) => {
       editRoom(room, id)  
     .then(res => {
@@ -28,7 +30,10 @@ export default function Edit(props) {
         console.log('Failed:', errorInfo);
       };
     return (
+      <Fragment>
+
         <div className="login">
+          
                 <NavLink to= '/admin'  activeClassName="isActive" exact>
                   <ArrowLeftOutlined />
                   </NavLink>
@@ -40,8 +45,11 @@ export default function Edit(props) {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
+
              <h1 >Edit Room</h1>
-          <Form.Item
+                  
+             <ModalRoom />
+          <Form.Item 
             label="name"
             name="name"
             rules={[
@@ -72,24 +80,31 @@ export default function Edit(props) {
           </Form.Item>
 
           <Form.Item
-            label="time"
-            name="time"
+            label="image_path"
+            name="image_path"
             rules={[
            
             ]}
           >
             <Input />
           </Form.Item>
-    
+          
+         
+         
+
           <Form.Item {...tailLayout}>
-            <Button  htmlType="submit">
+            <Button className="secondButton" type="dashed"  htmlType="submit">
               Submit
             </Button>
           </Form.Item>
-        
+
+         
         </Form>
         
         </div>
+      
+
+        </Fragment>
       );
 }
 

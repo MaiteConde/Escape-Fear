@@ -1,0 +1,9 @@
+@import '../../colors.scss';
+
+.modalContainer {
+    .anticon[tabindex] {
+        color: $Solid;
+        font-size: 3em;
+        margin: 0 7em 0.5em 0;
+    }
+}

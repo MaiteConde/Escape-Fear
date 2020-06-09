@@ -20,15 +20,34 @@ class RoomController extends Controller
         $room = Room::with('category', 'assessment.user', 'reservations')->find($id);
         return $room;
     }
+     
+
     public function insert(Request $request)
     {
         try {
-            $body = $request->all(); 
+          $body=  $request->validate(['name' => 'required','history' => 'required', 'persons' => 'required', 'time' => 'required', 'img' => 'required','city' => 'required', 'category_id' => 'required' ]);
+            $imageName = time() . '-' . request()->img->getClientOriginalName(); //time() es como Date.now()
+            request()->img->move('images/rooms', $imageName); //mueve el archivo subido al directorio indicado (en este caso public path es dentro de la carpeta public)
+            $body['image_path'] = $imageName;
             $room = Room::create($body);
-            return $room;
+        } catch (\Exception $e) {
+            return response($e,500);
+        }
+        return response($room, 201);
+    }
+
+    public function uploadImage(Request $request, $id)
+    {
+        try {
+          
+            $room = Room::find($id);
+            $imageName = time() . '-' . request()->img->getClientOriginalName();
+            request()->img->move('images/rooms', $imageName);
+            $room->update(['image_path' => $imageName]);
+            return response($room);
         } catch (\Exception $e) {
             return response([
-                'error' => $e->getMessage()
+                'error' => $e, 
             ], 500);
         }
     }
