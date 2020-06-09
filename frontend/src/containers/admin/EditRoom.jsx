@@ -23,7 +23,7 @@ export default function Edit(props) {
 .catch(err =>{
     notification.error({ message: 'Error'})
     setTimeout(() => {
-        props.history.push('/');
+        props.history.push('/admin');
         console.error(err)})
     }, 2000);}
       const onFinishFailed = errorInfo => {
