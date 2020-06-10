@@ -18,6 +18,10 @@ Aquí se ve como puedes crear una reserva:
  Podemos ver el detalle de las salas: 
 ![foto](imagesReadme/CapturaRoom.JPG)
 
+Enviando formulario de contacto:
+
+![foto](imagesReadme/contact.gif)
+
 
 Vista de Admin, donde puedes tratar con las salas y los usuarios: 
  ![foto](imagesReadme/CapturaAdmin.JPG)
