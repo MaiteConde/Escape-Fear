@@ -7,7 +7,7 @@ Además de esto, hay un formulario de contacto y una vista About con informació
 datos.
 #### Preview
 Vista de home:
-![foto](imagesReamde/escapefear2.JPG)
+![foto](imagesReamde/CapturaHome.JPG)
 ![foto](imagesReadme/escapefear1.JPG)
 Vista perfil:
 ![foto](imagesReadme/escapefear3.JPG)
@@ -15,6 +15,7 @@ Aquí se ve como puedes crear una reserva:
 ![foto](imagesReadme/gif reservation.gif)
 
  Podemos ver el detalle de las salas: 
+![foto](imagesReadme/CapturaRoom.JPG)
 
 
 Vista de Admin, donde puedes tratar con las salas y los usuarios: 
