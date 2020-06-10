@@ -22,9 +22,11 @@ Aquí se ve como puedes crear una reserva:
 Vista de Admin, donde puedes tratar con las salas y los usuarios: 
  ![foto](imagesReadme/CapturaAdmin.JPG)
 
- 
+ Vista de about:
+![foto](imagesReadme/CapturaAbout.JPG)
+
 Página 404:
 ![foto](imagesReadme/Captura404.JPG)
 
-Vista de about:
-![foto](imagesReadme/CapturaAbout.JPG)
+
+
