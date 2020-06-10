@@ -3,8 +3,7 @@ Aplicación web que simula el servicio de reservas de escape rooms, puedes ver l
 Si eres Admin, puedes acceder a la vista que te pemrite editar, crear y borrar salas, admeás de banear (y recuperar) usuarios. Esta vista está protegida con guards, al igual que la de perfil o la posibilidad de reservar sin estar conectado.
 Además de esto, hay un formulario de contacto y una vista About con información sobre las salas y Escape-fear.
 ## Tecnologías utilizadas :hammer_and_wrench:
->Este proyecto esta creado con React en el frontend y Antd como framework de css. Y con PHP Laravel en el backend y MySQL como base de
-datos.
+>Este proyecto esta creado con React en el frontend y Antd como framework de css. En el backend he tilizado PHP con Laravel y MySQL como base de datos.
 #### Preview
 Vista de home:
 ![foto](imagesReadme/CapturaHome.JPG)
