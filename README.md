@@ -7,10 +7,10 @@ Además de esto, hay un formulario de contacto y una vista About con informació
 datos.
 #### Preview
 Vista de home:
-![foto](imagesReamde/escape fear 2.JPG)
-![foto](imagesReadme/escape fear 1.JPG)
+![foto](imagesReamde/escapefear 2.JPG)
+![foto](imagesReadme/escapefear 1.JPG)
 Vista perfil:
-![foto](imagesReadme/escape fear 3.JPG)
+![foto](imagesReadme/escapefear 3.JPG)
 Aquí se ve como puedes crear una reserva:
 ![foto](imagesReadme/gif reservation.gif)
 
