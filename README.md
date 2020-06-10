@@ -24,7 +24,7 @@ Enviando formulario de contacto:
 
 
 Vista de Admin, donde puedes tratar con las salas y los usuarios: 
- ![foto](imagesReadme/CapturaAdmin.JPG)
+ ![foto](imagesReadme/4jwwi-0qpk1.gif)
 
  Vista de about:
 ![foto](imagesReadme/CapturaAbout.JPG)
