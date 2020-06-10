@@ -8,6 +8,8 @@ datos.
 #### Preview
 Vista de home:
 ![foto](imagesReamde/CapturaHome.JPG)
+![foto](imagesReamde/escapefear1.JPG)
+
 Vista perfil:
 ![foto](imagesReadme/escapefear3.JPG)
 Aquí se ve como puedes crear una reserva:
