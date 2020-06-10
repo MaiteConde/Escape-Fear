@@ -23,7 +23,7 @@ Enviando formulario de contacto:
 ![foto](imagesReadme/contact.gif)
 
 
-Vista de Admin, donde puedes tratar con las salas y los usuarios: 
+Vista de Admin, donde puedes realizar lo descrito anteriormente: 
  ![foto](imagesReadme/4jwwi-0qpk1.gif)
 
  Vista de about:
