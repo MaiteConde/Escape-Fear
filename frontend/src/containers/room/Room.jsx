@@ -32,7 +32,7 @@ const assessmentName= room?.assessment?.map((assessment => assessment?.user?.ema
 
 
         <div className="room">
-    <img alt="example" src={room?.image_path} />
+    <img alt="example" src={`http://localhost:8000/images/rooms/${room?.image_path}`} />
     </div>
   <div className="info">
 
