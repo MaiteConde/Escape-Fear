@@ -8,14 +8,13 @@ datos.
 #### Preview
 Vista de home:
 ![foto](imagesReadme/CapturaHome.JPG)
-![foto](imagesReamde/escapefear1.JPG)
 
 Vista perfil:
 ![foto](imagesReadme/escapefear3.JPG)
 
 Aquí se ve como puedes crear una reserva:
 
-![foto](imagesReadme/gif reservation.gif)
+![foto](imagesReadme/gifreservation.gif)
 
  Podemos ver el detalle de las salas: 
 ![foto](imagesReadme/CapturaRoom.JPG)
